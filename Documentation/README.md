@@ -19,11 +19,10 @@ Az alkalmazás célja hogy lehetővé tegye a valutaátváltás a felhasználó 
 | Funkció | F2 | Logolás | A program mentse el, a régebbi átváltásokat, és azok legyenek megtekinthetőek a felhasználó számára. |
 | Funkció | F3 | Keresés | A mentett váltásokban lehessen dátum, illetve valuta szerint szűrni/keresni. |
 | Funkció | F4 | Gyors elérés és rendezés | Az utoljára használt 5 valutatípus legyen felül/könnyedén elérhető, a maradék pedig abc szerint rendezve. |
-| Funkció | F5 | API | Az aktuális árfolyamot valamilyen API használatával kell megszerezni |
-| Megjelenés | M1 | Menürendszer | A program rendelkezzen könnyedén használható, és navigálható menüvel, egyértelmű jelzésekkel |
-| Kényelem | K1 | Automatikus felismerés | A program automatikusan ismerje fel a beírt valutákat ($, Ft ...) |
-| Kényelem | K2 | Listázás | A legtöbbet/utoljára használt valutákban alapesetben jelenítse meg az átváltott értéket a gyorsaság érdekében |
-| Kényelem | K3 | Beállítás | Beállításokban előre állíthassunk be preferált cél valutákat, amik így a K2 követelményben megjelennek |
-| Kényelem | K4 | Kikapcsolás | A beállításokban legyen lehetőségünk kényelmi funkciókat ki vagy be kapcsolni |
-| Kényelem | K5 | Lista rendezés | A K2 követelmény érték szerinti rendezése be/ki kapcsolható legyen a beállításokban |
-| Nyelvesítés | N1 | Kétnyelvű | A programban állítható legyen a nyelv angol, illetve magyar nyelv között. |
+| Funkció | F5 | API | Az aktuális árfolyamot valamilyen API használatával kell megszerezni. |
+| Megjelenés | M1 | Menürendszer | A program rendelkezzen könnyedén használható, és navigálható menüvel, egyértelmű jelzésekkel. |
+| Kényelem | K1 | Automatikus felismerés | A program automatikusan ismerje fel a beírt valutákat. ($, Ft ...) |
+| Kényelem | K2 | Listázás | A legtöbbet/utoljára használt valutákban alapesetben jelenítse meg az átváltott értéket a gyorsaság érdekében. |
+| Kényelem | K3 | Beállítás | Beállításokban előre állíthassunk be preferált cél, és kiinduló valutákat, amik így a K2 követelményben megjelennek. |
+| Kényelem | K4 | Kikapcsolás | A beállításokban legyen lehetőségünk kényelmi funkciókat ki/be kapcsolni. |
+| Nyelvesítés | NY1 | Kétnyelvű | A programban állítható legyen a nyelv angol, illetve magyar nyelv között. |
