@@ -29,14 +29,15 @@ Az alkalmazás célja hogy lehetővé tegye a valutaátváltás a felhasználó 
 
 ## Használati esetek
 
-A programban nem lesz felhasználókezelés, mivel nem kezelünk bármilyen szempontból is érzékeny adatot.
+A programban nem lesz felhasználókezelés, mivel nem kezelünk érzékeny adatokat.
 
 ## Képernyő tervek
-A képernyőtervek a valódi megvalósítástól eltérhetnek.
+A képernyőtervek a valódi megvalósítástól eltérhetnek. Nem beszélhetünk valódi képernyőtervről, de a menü megjelenése a következő szerint kell megvalósuljon:
 
 
 ```
-2021                                  Innovitech - Valutaátváltó
+2021                                                 Innovitech - Valutaátváltó
+
       [0] Valutaátváltás
       [1] Tárolt átváltások megtekintése
       [2] Beállítások
@@ -44,6 +45,7 @@ A képernyőtervek a valódi megvalósítástól eltérhetnek.
       [Q] Kilépés
 
     >> Q
+
   Biztos vagy benne hogy kiszeretnél lépni? [I/n]
   >> _
 ```
