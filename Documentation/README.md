@@ -25,6 +25,7 @@ Az alkalmazás célja hogy lehetővé tegye a valutaátváltás a felhasználó 
 | Kényelem | K2 | Listázás | A legtöbbet/utoljára használt valutákban alapesetben jelenítse meg az átváltott értéket a gyorsaság érdekében. |
 | Kényelem | K3 | Beállítás | Beállításokban előre állíthassunk be preferált cél, és kiinduló valutákat, amik így a K2 követelményben megjelennek. |
 | Kényelem | K4 | Kikapcsolás | A beállításokban legyen lehetőségünk kényelmi funkciókat ki/be kapcsolni. |
+| Kényelem | K5 | Megnevezés | A pénznemekhez legyenek megjelenítve a megnevezéseik |
 | Nyelvesítés | NY1 | Kétnyelvű | A programban állítható legyen a nyelv angol, illetve magyar nyelv között. |
 
 ## Használati esetek
