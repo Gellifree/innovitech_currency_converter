@@ -26,3 +26,24 @@ Az alkalmazás célja hogy lehetővé tegye a valutaátváltás a felhasználó 
 | Kényelem | K3 | Beállítás | Beállításokban előre állíthassunk be preferált cél, és kiinduló valutákat, amik így a K2 követelményben megjelennek. |
 | Kényelem | K4 | Kikapcsolás | A beállításokban legyen lehetőségünk kényelmi funkciókat ki/be kapcsolni. |
 | Nyelvesítés | NY1 | Kétnyelvű | A programban állítható legyen a nyelv angol, illetve magyar nyelv között. |
+
+## Használati esetek
+
+A programban nem lesz felhasználókezelés, mivel nem kezelünk bármilyen szempontból is érzékeny adatot.
+
+## Képernyő tervek
+A képernyőtervek a valódi megvalósítástól eltérhetnek.
+
+
+```
+2021                                  Innovitech - Valutaátváltó
+      [0] Valutaátváltás
+      [1] Tárolt átváltások megtekintése
+      [2] Beállítások
+      [3] Segítség
+      [Q] Kilépés
+
+    >> Q
+  Biztos vagy benne hogy kiszeretnél lépni? [I/n]
+  >> _
+```
