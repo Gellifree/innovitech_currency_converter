@@ -9,7 +9,7 @@
 
 ## Feladat áttekintése
 
-Az alkalmazás célja hogy lehetővé tegye a valutaátváltás a felhasználó számára az aktuális árfolyamokat figyelembe véve. A feladatot konzolos alkalmazásként fogom elkészíteni.
+Az alkalmazás célja hogy lehetővé tegye a valutaátváltást a felhasználó számára az aktuális árfolyamokat figyelembe véve. A feladatot konzolos alkalmazásként fogom elkészíteni.
 
 ## Követelménylista
 
@@ -26,15 +26,14 @@ Az alkalmazás célja hogy lehetővé tegye a valutaátváltás a felhasználó 
 | Kényelem | K3 | Beállítás | Beállításokban előre állíthassunk be preferált cél, és kiinduló valutákat, amik így a K2 követelményben megjelennek. |
 | Kényelem | K4 | Kikapcsolás | A beállításokban legyen lehetőségünk kényelmi funkciókat ki/be kapcsolni. |
 | Kényelem | K5 | Megnevezés | A pénznemekhez legyenek megjelenítve a megnevezéseik |
-| Nyelvesítés | NY1 | Kétnyelvű | A programban állítható legyen a nyelv angol, illetve magyar nyelv között. |
+| Nyelvesítés | NY1 | Kétnyelvűség | A programban állítható legyen a nyelv angol, illetve magyar nyelv között. |
 
 ## Használati esetek
 
 A programban nem lesz felhasználókezelés, mivel nem kezelünk érzékeny adatokat.
 
 ## Képernyő tervek
-A képernyőtervek a valódi megvalósítástól eltérhetnek. Nem beszélhetünk valódi képernyőtervről, de a menü megjelenése a következő szerint kell megvalósuljon:
-
+A képernyőtervek a valódi megvalósítástól eltérhetnek. Nem beszélhetünk valódi képernyőtervről, de a menü megjelenése a következő mintát kell kövesse:
 
 ```
 2021                                                 Innovitech - Valutaátváltó
