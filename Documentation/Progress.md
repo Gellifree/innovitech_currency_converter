@@ -10,11 +10,11 @@ A program bővítésre került a Funkció modulból az egyszerű átváltással 
  - [X] NY1
  - [X] F1
  - [X] F5
- - [] F2 - Logolás fájl elkészült, funkció nem
- - [] F3 - F2 nélkül nem implementált
- - [] F4 - F2 nélkül nem implementált
- - [] K1 - A jelenlegi rendszer hibatűrésének javítása után lesz prioritás
- - [] K2 - részben az F2 függvénye
- - [] K3 - részben K2 függvénye
- - [] K4 - Kényelmi funkciók megvalósítását követi
- - [] K5 - pénznemek megtekintésének lehetőségéhez köthető
+ - [ ] F2 - Logolás fájl elkészült, funkció nem
+ - [ ] F3 - F2 nélkül nem implementált
+ - [ ] F4 - F2 nélkül nem implementált
+ - [ ] K1 - A jelenlegi rendszer hibatűrésének javítása után lesz prioritás
+ - [ ] K2 - részben az F2 függvénye
+ - [ ] K3 - részben K2 függvénye
+ - [ ] K4 - Kényelmi funkciók megvalósítását követi
+ - [ ] K5 - pénznemek megtekintésének lehetőségéhez köthető
