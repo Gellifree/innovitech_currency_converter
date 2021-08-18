@@ -1,3 +1,14 @@
+import settings as s
+
+if(s.settings["language"] == "hungarian"):
+	import hungarian as l
+elif(s.settings["language"] == "english"):
+	import english as l
+else:
+	print(" >> Nyelvi beállítások nem megfelelőek <<")
+	import hungarian as l
+
+
 class MenuDrawer:
     def draw(self, elements):
         index = 0
@@ -18,7 +29,7 @@ class MenuDrawer:
                 return answer
                 # normal answer between array indexes including quitting
             else:
-                print("  >> Nem adhatsz meg ilyen opciót! <<")
+                print(l.lang["bad_index"])
                 return -2
                 # over, or underindexing
         except:
@@ -26,6 +37,6 @@ class MenuDrawer:
                 return -1
                 # exitcode again
             else:
-                print("  >> A kérés értelmezhetetlen! <<")
+                print(l.lang["unknown_answer"])
                 return -3
                 # unidentified command
