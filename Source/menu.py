@@ -6,7 +6,7 @@ if(s.settings["language"] == "hungarian"):
 elif(s.settings["language"] == "english"):
 	import languages.english as l
 else:
-	# print(" >> Nyelvi beállítások nem megfelelőek <<")
+	# nem értelmezhető nyelvi beállítás
 	import languages.hungarian as l
 
 
