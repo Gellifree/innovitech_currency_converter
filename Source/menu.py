@@ -1,12 +1,12 @@
 import settings as s
 
 if(s.settings["language"] == "hungarian"):
-	import hungarian as l
+	import languages.hungarian as l
 elif(s.settings["language"] == "english"):
-	import english as l
+	import languages.english as l
 else:
-	print(" >> Nyelvi beállítások nem megfelelőek <<")
-	import hungarian as l
+	# print(" >> Nyelvi beállítások nem megfelelőek <<")
+	from languages import hungarian as l
 
 
 class MenuDrawer:

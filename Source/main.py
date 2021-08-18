@@ -5,15 +5,16 @@
 #
 
 import os
-import menu, settings as s, functions
+import menu, settings as s, functions, sys
+
 
 if(s.settings["language"] == "hungarian"):
-	import hungarian as l
+	import languages.hungarian as l
 elif(s.settings["language"] == "english"):
-	import english as l
+	import languages.english as l
 else:
-	print(" >> Nyelvi beállítások nem megfelelőek <<")
-	import hungarian as l
+	# print(" >> Nyelvi beállítások nem megfelelőek <<")
+	import languages.hungarian as l
 
 md = menu.MenuDrawer()
 f = functions.Functions()
@@ -27,7 +28,6 @@ def main():
 		os.system("clear")
 
 		width = os.get_terminal_size().columns
-		middleText = "Valutaátváltó\n"
 		middleText = l.lang["title"] + "\n"
 		print("2021 Kovács Norbert", end="")
 		print(middleText.center(width-(2*len(middleText))))
@@ -38,7 +38,7 @@ def main():
 		elif(answer != -1):
 			print(" >> " + testMenuItems[answer] + " <<\n")
 			func_list[answer]()
-			input(" >> Kész <<")
+			input(l.lang["done"])
 		else:
 			input(l.lang["quitting"])
 			os.system("clear")
