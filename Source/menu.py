@@ -15,7 +15,7 @@ class MenuDrawer:
     def draw(self, elements):
         index = 0
         for element in elements:
-            if(element == "Kilépés"):
+            if(element == l.lang["menu_item_quit"]):
                 print("    [Q] {}".format(element))
             else:
                 print("    [{}] {}".format(index, element))
@@ -26,7 +26,7 @@ class MenuDrawer:
         try:
             answer = int(answer)
             if(answer >= 0 and answer < len(elements)):
-                if(elements[answer] == "Kilépés"):
+                if(elements[answer] == l.lang["menu_item_quit"]):
                     return -1
                 return answer
                 # normal answer between array indexes including quitting

@@ -1,9 +1,29 @@
-import json
+import file_handler, settings as s
+import converter
+
+# Megfelelő nyelvi fájl betöltése
+if(s.settings["language"] == "hungarian"):
+	import languages.hungarian as l
+elif(s.settings["language"] == "english"):
+	import languages.english as l
+else:
+	# nem értelmezhető nyelvi beállítás
+	import languages.hungarian as l
+
 
 # A menühöz tartozó funkciók
 class Functions():
-    def first(self):
-        pass
+    def __init__(self):
+        self.c = converter.Converter()
+
+    def exchange(self):
+        print(l.lang["value"])
+        value = float(input("  >> "))
+        print(l.lang["base"])
+        base = input("  >> ")
+        print(l.lang["target"])
+        target = input ("  >> ")
+        print("Az eredmény: ", self.c.convert(base, target, value))
         #with open("data/exchange_rates.json") as json_file:
         #    data = json.load(json_file)
 
@@ -16,11 +36,11 @@ class Functions():
             #    print(data['rates'][element])
 
 
-    def second(self):
+    def view(self):
         print("second function")
 
-    def third(self):
+    def settings(self):
         print("third function")
 
-    def fourth(self):
+    def help(self):
         print("fourth function")
