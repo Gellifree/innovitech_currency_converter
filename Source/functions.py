@@ -20,9 +20,9 @@ class Functions():
         print(l.lang["value"])
         value = float(input("  >> "))
         print(l.lang["base"])
-        base = input("  >> ")
+        base = input("  >> ").upper()
         print(l.lang["target"])
-        target = input ("  >> ")
+        target = input ("  >> ").upper()
         print("Az eredmény: ", self.c.convert(base, target, value))
         #with open("data/exchange_rates.json") as json_file:
         #    data = json.load(json_file)
