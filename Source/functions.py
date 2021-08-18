@@ -7,3 +7,7 @@ class Functions():
 
     def third(self):
         print("third function")
+
+    def fourth(self):
+        print("fourth function")
+        
