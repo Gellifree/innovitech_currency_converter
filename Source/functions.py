@@ -1,3 +1,4 @@
+# A menühöz tartozó funkciók
 class Functions():
     def first(self):
         print("first function")
@@ -10,4 +11,3 @@ class Functions():
 
     def fourth(self):
         print("fourth function")
-        

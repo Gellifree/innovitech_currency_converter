@@ -1,14 +1,16 @@
 import settings as s
 
+# Megfelelő nyelvi fájl betöltése
 if(s.settings["language"] == "hungarian"):
 	import languages.hungarian as l
 elif(s.settings["language"] == "english"):
 	import languages.english as l
 else:
 	# print(" >> Nyelvi beállítások nem megfelelőek <<")
-	from languages import hungarian as l
+	import languages.hungarian as l
 
 
+# Menü kirajzolását megvalósító osztály
 class MenuDrawer:
     def draw(self, elements):
         index = 0

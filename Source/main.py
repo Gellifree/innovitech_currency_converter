@@ -7,17 +7,20 @@
 import os
 import menu, settings as s, functions, sys
 
-
+# Megfelelő nyelvi fájl betöltése
 if(s.settings["language"] == "hungarian"):
 	import languages.hungarian as l
 elif(s.settings["language"] == "english"):
 	import languages.english as l
 else:
-	# print(" >> Nyelvi beállítások nem megfelelőek <<")
+	# nem értelmezhető nyelvi beállítás
 	import languages.hungarian as l
 
 md = menu.MenuDrawer()
 f = functions.Functions()
+
+
+
 
 def main():
 	testMenuItems = ("Első", "Második", "Harmadik", "Negyedik", "Kilépés")
@@ -42,8 +45,6 @@ def main():
 		else:
 			input(l.lang["quitting"])
 			os.system("clear")
-
-	#print(s.settings["language"])
 
 if __name__ == "__main__":
 	main()
