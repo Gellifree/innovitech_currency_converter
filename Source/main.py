@@ -3,15 +3,19 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2021 Kovács Norbert <mfw.kovacs.norbert@gmail.com>
 #
-import menu, settings as s
+import menu, settings as s, functions
+
+md = menu.MenuDrawer()
+f = functions.Functions()
 
 testMenuItems = ["Első", "Második", "Harmadik", "Negyedik", "Kilépés"]
+func_list = [f.first, f.second, f.third]
 
 def main():
-	testMenu = menu.MenuDrawer()
-	print(testMenu.draw(testMenuItems))
+	print(md.draw(testMenuItems))
+	print(s.settings["language"])
+	func_list[0]()
 
-	print(s.settings["kukac"])
 
 if __name__ == "__main__":
 	main()
