@@ -13,24 +13,29 @@ else:
 
 # A menühöz tartozó funkciók
 class Functions():
-    def __init__(self):
-        self.c = converter.Converter()
+	def __init__(self):
+		self.c = converter.Converter()
 
-    def exchange(self):
-        print(l.lang["value"])
-        value = float(input("  >> "))
-        print(l.lang["base"])
-        base = input("  >> ").upper()
-        print(l.lang["target"])
-        target = input ("  >> ").upper()
-        print("Az eredmény: ", self.c.convert(base, target, value))
+	def exchange(self):
+		#Hibakezelés később
+		print(l.lang["value"])
+		value = float(input("  >> "))
+		print(l.lang["base"])
+		base = input("  >> ").upper()
+		print(l.lang["target"])
+		target = input ("  >> ").upper()
+
+		fh = file_handler.FileHandler()
+		fh.save_exchange(base, target, value)
+
+		print("Az eredmény: ", self.c.convert(base, target, value))
 
 
-    def view(self):
-        print("second function")
+	def view(self):
+		print("second function")
 
-    def settings(self):
-        print("third function")
+	def settings(self):
+		print("third function")
 
-    def help(self):
-        print("fourth function")
+	def help(self):
+		print("fourth function")
