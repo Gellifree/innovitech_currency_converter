@@ -1,4 +1,4 @@
-import file_handler, settings as s
+import file_handler, settings as s, error_handler
 import converter, menu
 
 # Megfelelő nyelvi fájl betöltése
@@ -16,20 +16,41 @@ class Functions():
 	def __init__(self):
 		self.c = converter.Converter()
 		self.md = menu.MenuDrawer()
+		self.eh = error_handler.ErrorHandler()
 
 	def exchange(self):
 		#Hibakezelés később
-		print(l.lang["value"])
-		value = float(input("  >> "))
-		print(l.lang["base"])
-		base = input("  >> ").upper()
-		print(l.lang["target"])
-		target = input ("  >> ").upper()
+
+		value = "unknown"
+		while(self.eh.validNumber(value) == False):
+			print(l.lang["value"])
+			value = input("  >> ")
+
+			if(self.eh.validNumber(value)):
+				value = float(value)
+			else:
+				print(l.lang["not_a_number"])
+
+
+		base = "unknown"
+		while(self.eh.validCurrency(base) == False):
+			print(l.lang["base"])
+			base = input("  >> ").upper()
+			if(self.eh.validCurrency(base) == False):
+				print(l.lang["not_a_currency"])
+
+
+		target = "unknown"
+		while(self.eh.validCurrency(target) == False):
+			print(l.lang["target"])
+			target = input ("  >> ").upper()
+			if(self.eh.validCurrency(target) == False):
+				print(l.lang["not_a_currency"])
 
 		fh = file_handler.FileHandler()
 		fh.saveExchange(base, target, value)
 
-		print("Az eredmény: ", self.c.convert(base, target, value))
+		print(l.lang["result"], self.c.convert(base, target, value))
 
 
 	def printHeader(self):

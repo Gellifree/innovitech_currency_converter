@@ -16,8 +16,8 @@ lang["menu_item_quit"]          = "Exit"
 lang["menu_item_list_currency"] = "List all currency"
 
 lang["value"]                   = "  >> Please enter the value you need to convert! <<"
-lang["base"]                    = "  >> What is the currency of the entered value? <<"
-lang["target"]                  = "  >> What currency you want to convert to? <<"
+lang["base"]                    = "\n  >> What is the currency of the entered value? <<"
+lang["target"]                  = "\n  >> What currency you want to convert to? <<"
 
 lang["sub_menu_all"]            = "View all"
 lang["sub_menu_date"]           = "Filter by date"
@@ -27,4 +27,9 @@ lang["ask_date"]                = "  >> Please specify the date! (YYYY-MM-DD) <<
 lang["ask_currency"]            = "  >> Please specify the currency! <<"
 lang["table_title"]             = ">> Unfiltered table <<"
 lang["item_counter"]            = " item(s) were found."
-lang["all_item"]                = " pieces of total."
+lang["all_item"]                = " pieces in total."
+
+lang["not_a_number"]            = "  >> The entered data cannot be converted into a number! <<"
+lang["not_a_currency"]          = "  >> I can't find the currency you typed! <<"
+
+lang["result"]                  = "\n  The result: "

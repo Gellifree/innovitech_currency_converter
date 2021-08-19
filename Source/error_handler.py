@@ -9,6 +9,13 @@ class ErrorHandler():
                 return True
         return False
 
+    def validNumber(self, number):
+        try:
+            result = float(number)
+            return True
+        except:
+            return False
+
     def validDate(self, date):
         # implement later
         return False
