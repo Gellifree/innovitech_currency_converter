@@ -14,11 +14,12 @@ A program bővítésre került a Funkció modulból az egyszerű átváltással 
 
  **2021.08.19**
 
- Megvalósításra került az átváltások tárolása, és szűrése.
+ Megvalósításra került az átváltások tárolása, és szűrése, bővítve lettek a nyelvi állomámyok, és javítva lett az egyszerű átváltás, hogy kezelje az elgépelési hibát, és erről tájékoztassa a felhasználót. Egy egyszerű valuta kilistázás elkészült, nem feltétlenül ideális a megjelenítés.
 
  - [X] F2 - Automatikus mentés *.csv* fájlba
  - [X] F3 - Dátum szerinti, és valuta alapú szűrés hozzáadva, teljes listázás mellett
  - [X] K5 - A listázási funkció egy egyszerű megvalósítása kész, későbbi újratervezést igényelhet
+ - [X] F1 - Javított, hibatűrése növelve rosz adatbevitellel szemben
  - [ ] F4 - Az átváltás nem listából történik, hanem begépelés szerint, keresni kell egy alkalmas módszert a megvalósításra
  - [ ] K1 - A jelenlegi rendszer hibatűrésének javítása után lesz prioritás
  - [ ] K2 - A jelenlegi rendszer hibatűrésének javítása után lesz prioritás
