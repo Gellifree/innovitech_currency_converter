@@ -1,7 +1,7 @@
 lang = {}
 
-lang["bad_index"]               = "  >> Nem adhatsz meg ilyen opciót! <<"
-lang["unknown_answer"]          = "  >> A kérés értelmezhetetlen! <<"
+lang["bad_index"]               = "  >>> Nem adhatsz meg ilyen opciót! <<<"
+lang["unknown_answer"]          = "  >>> A kérés értelmezhetetlen! <<<"
 lang["press_enter"]             = "  >> Nyomj entert a folytatáshoz! <<"
 lang["quitting"]                = " >> A program most kilép! <<"
 lang["title"]                   = "Valutaátváltó"
@@ -29,7 +29,8 @@ lang["table_title"]             = ">> Szűrés nélküli táblázat <<"
 lang["item_counter"]            = " elem lett megtalálva."
 lang["all_item"]                = " darab összesen."
 
-lang["not_a_number"]            = "  >> A beírt adat nem konvertálható számmá! <<"
-lang["not_a_currency"]          = "  >> A beírt valuta nem található! <<"
+lang["not_a_number"]            = "  >>> A beírt adat nem konvertálható számmá! <<<"
+lang["not_a_currency"]          = "  >>> A beírt valuta nem található! <<<"
 
 lang["result"]                  = "\n  Az eredmény: "
+lang["check_currency_list"]     = "  >>> Ellenőrizd az \033[1m Összes valuta listázása \033[0m menüpontot! <<<"

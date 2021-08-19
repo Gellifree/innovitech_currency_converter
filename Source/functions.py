@@ -38,6 +38,7 @@ class Functions():
 			base = input("  >> ").upper()
 			if(self.eh.validCurrency(base) == False):
 				print(l.lang["not_a_currency"])
+				print(l.lang["check_currency_list"])
 
 
 		target = "unknown"
@@ -46,6 +47,9 @@ class Functions():
 			target = input ("  >> ").upper()
 			if(self.eh.validCurrency(target) == False):
 				print(l.lang["not_a_currency"])
+				print(l.lang["check_currency_list"])
+
+
 
 		fh = file_handler.FileHandler()
 		fh.saveExchange(base, target, value)
