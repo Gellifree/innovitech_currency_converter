@@ -17,3 +17,11 @@ lang["menu_item_quit"]          = "Kilépés"
 lang["value"]                   = "  >> Kérlek add meg az átváltandó értéket! <<"
 lang["base"]                    = "  >> Milyen pénznemben értelmezett az összeg? <<"
 lang["target"]                  = "  >> Milyen pénznembe szeretnéd átváltani? <<"
+
+lang["sub_menu_all"]            = "Összes megtekintése"
+lang["sub_menu_date"]           = "Dátum szerinti szűrés"
+lang["sub_menu_currency"]       = "Valuta szrinti szűrés"
+
+lang["ask_date"]                = "  >> Kérlek add meg a dátumot! (ÉÉÉÉ-HH-NN) <<"
+lang["ask_currency"]            = "  >> Kérlek add meg a pénznemet! <<"
+lang["table_title"]            = ">> Szűrés nélkül táblázat<<"

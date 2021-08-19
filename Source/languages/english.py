@@ -17,3 +17,11 @@ lang["menu_item_quit"]          = "Exit"
 lang["value"]                   = "  >> Please enter the value you need to convert! <<"
 lang["base"]                    = "  >> What is the currency of the entered value? <<"
 lang["target"]                  = "  >> What currency you want to convert to? <<"
+
+lang["sub_menu_all"]            = "View all"
+lang["sub_menu_date"]           = "Filter by date"
+lang["sub_menu_currency"]       = "Filter by currency"
+
+lang["ask_date"]                = "  >> Please specify the date! (YYYY-MM-DD) <<"
+lang["ask_currency"]            = "  >> Please specify the currency! <<"
+lang["table_title"]            = ">> Unfiltered table <<"

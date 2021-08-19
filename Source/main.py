@@ -20,10 +20,8 @@ md = menu.MenuDrawer()
 f = functions.Functions()
 
 
-
-
 def main():
-	testMenuItems = (l.lang["menu_item_exchange"], l.lang["menu_item_view"], l.lang["menu_item_settings"], l.lang["menu_item_help"], l.lang["menu_item_quit"])
+	mainMenu = (l.lang["menu_item_exchange"], l.lang["menu_item_view"], l.lang["menu_item_settings"], l.lang["menu_item_help"], l.lang["menu_item_quit"])
 	func_list = [f.exchange, f.view, f.settings, f.help]
 
 	answer = 0
@@ -34,12 +32,12 @@ def main():
 		middleText = l.lang["title"] + "\n"
 		print("2021 Kovács Norbert", end="")
 		print(middleText.center(width-(2*len(middleText))))
-		answer = md.draw(testMenuItems)
+		answer = md.draw(mainMenu)
 
 		if(answer == -2 or answer == -3):
 			input(l.lang["press_enter"])
 		elif(answer != -1):
-			print(" >> " + testMenuItems[answer] + " <<\n")
+			print(" >> " + mainMenu[answer] + " <<\n")
 			func_list[answer]()
 			input(l.lang["done"])
 		else:

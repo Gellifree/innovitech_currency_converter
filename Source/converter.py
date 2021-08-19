@@ -5,10 +5,10 @@ class Converter():
         self.fh = file_handler.FileHandler()
 
     def convertFromEur(self, value, target):
-        return value * self.fh.read_exchange()['rates'][target]
+        return value * self.fh.readExchange()['rates'][target]
 
     def convertToEur(self, value, base):
-        return value / self.fh.read_exchange()['rates'][base]
+        return value / self.fh.readExchange()['rates'][base]
 
     def convert(self, base, target, value):
         # Konvertáljuk át az értéket, a kiinduló alapból (base) Euróba
