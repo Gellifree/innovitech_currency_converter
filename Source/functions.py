@@ -39,46 +39,58 @@ class Functions():
 
 		for headerTitle in next(dataSet):
 			if(headerTitle == 'date'):
-				print(headerTitle + "\t\t", end="")
+				print("  " + headerTitle + "\t\t", end="")
 			elif(headerTitle == 'result'):
 				print(headerTitle + "\t", end="\n")
-				print("------------------------------------------------------------", end="")
+				print("  ------------------------------------------------------------", end="")
 			else:
 				print(headerTitle + "\t", end="")
 		print()
 
 	def viewAll(self):
+		counter = 0
 		fh = file_handler.FileHandler()
 		dataSet = fh.readSavedConversions()
 		print(l.lang["table_title"])
 		self.printHeader()
 		next(dataSet)
 		for data in dataSet:
+			print("  ", end='')
 			for detail in data:
 				print(detail + "\t", end="")
+			counter += 1
 			print()
+		print("\n  " + str(counter) + l.lang["all_item"])
 		print()
 
 	def viewByDate(self, date):
+		counter = 0
 		fh = file_handler.FileHandler()
 		dataSet = fh.readSavedConversions()
 		self.printHeader()
 		for data in dataSet:
 			if(data[0] == date):
+				print("  ", end='')
 				for detail in data:
 					print(detail + "\t", end="")
+				counter += 1
 				print()
+		print("\n  " + str(counter) + l.lang["item_counter"])
 		print()
 
 	def viewByCurrency(self, currency):
+		counter = 0
 		fh = file_handler.FileHandler()
 		dataSet = fh.readSavedConversions()
 		self.printHeader()
 		for data in dataSet:
 			if(data[1] == currency or data[2] == currency):
+				print("  ", end='')
 				for detail in data:
 					print(detail + "\t", end="")
+				counter += 1
 				print()
+		print("\n  " + str(counter) + l.lang["item_counter"])
 		print()
 
 	def view(self):

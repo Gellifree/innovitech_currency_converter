@@ -24,4 +24,6 @@ lang["sub_menu_currency"]       = "Filter by currency"
 
 lang["ask_date"]                = "  >> Please specify the date! (YYYY-MM-DD) <<"
 lang["ask_currency"]            = "  >> Please specify the currency! <<"
-lang["table_title"]            = ">> Unfiltered table <<"
+lang["table_title"]             = ">> Unfiltered table <<"
+lang["item_counter"]            = " item(s) were found."
+lang["all_item"]            = " pieces of total."

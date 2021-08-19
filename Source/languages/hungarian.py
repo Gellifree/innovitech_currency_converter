@@ -24,4 +24,6 @@ lang["sub_menu_currency"]       = "Valuta szrinti szűrés"
 
 lang["ask_date"]                = "  >> Kérlek add meg a dátumot! (ÉÉÉÉ-HH-NN) <<"
 lang["ask_currency"]            = "  >> Kérlek add meg a pénznemet! <<"
-lang["table_title"]            = ">> Szűrés nélkül táblázat<<"
+lang["table_title"]            = ">> Szűrés nélküli táblázat <<"
+lang["item_counter"]            = " elem lett megtalálva."
+lang["all_item"]            = " darab összesen."
