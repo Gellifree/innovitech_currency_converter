@@ -21,8 +21,8 @@ f = functions.Functions()
 
 
 def main():
-	mainMenu = (l.lang["menu_item_exchange"], l.lang["menu_item_view"], l.lang["menu_item_settings"], l.lang["menu_item_help"], l.lang["menu_item_quit"])
-	func_list = [f.exchange, f.view, f.settings, f.help]
+	mainMenu = (l.lang["menu_item_exchange"], l.lang["menu_item_list_currency"] ,l.lang["menu_item_view"], l.lang["menu_item_settings"], l.lang["menu_item_help"], l.lang["menu_item_quit"])
+	func_list = [f.exchange, f.list, f.view, f.settings, f.help]
 
 	answer = 0
 	while(answer != -1):

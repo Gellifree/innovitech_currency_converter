@@ -13,6 +13,7 @@ lang["menu_item_view"   ]       = "View stored conversions"
 lang["menu_item_settings"]      = "Settings"
 lang["menu_item_help"]          = "Help"
 lang["menu_item_quit"]          = "Exit"
+lang["menu_item_list_currency"] = "List all currency"
 
 lang["value"]                   = "  >> Please enter the value you need to convert! <<"
 lang["base"]                    = "  >> What is the currency of the entered value? <<"
@@ -26,4 +27,4 @@ lang["ask_date"]                = "  >> Please specify the date! (YYYY-MM-DD) <<
 lang["ask_currency"]            = "  >> Please specify the currency! <<"
 lang["table_title"]             = ">> Unfiltered table <<"
 lang["item_counter"]            = " item(s) were found."
-lang["all_item"]            = " pieces of total."
+lang["all_item"]                = " pieces of total."

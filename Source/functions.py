@@ -113,6 +113,14 @@ class Functions():
 				currency = input("  >> ").upper()
 				subMenuFuncList[answer](currency)
 
+	def list(self):
+		fh = file_handler.FileHandler()
+		dataSet = fh.readSymbols()['symbols']
+		counter = 0
+		for data in dataSet:
+			print(data + " - " + dataSet[data])
+
+		print("\n")
 
 	def settings(self):
 		print("third function")
