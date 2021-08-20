@@ -26,7 +26,7 @@ lang["sub_menu_currency"]       = "Filter by currency"
 
 lang["ask_date"]                = "  >> Please specify the date! (YYYY-MM-DD) <<"
 lang["ask_currency"]            = "  >> Please specify the currency! <<"
-lang["table_title"]             = ">> Unfiltered table <<"
+lang["table_title"]             = " >> Unfiltered table <<"
 lang["item_counter"]            = " item(s) were found."
 lang["all_item"]                = " pieces in total."
 
@@ -54,4 +54,9 @@ lang["english"]                 = "English"
 lang["current_lang"]            = "    Current language: "
 
 lang["mostly_used"]             = "Mostly used currencies: "
+lang["recently_used"]           = "Recently used currencies: "
 lang["no_recent_found"]         = "\n  >> No exchange history was found. <<"
+
+lang["currency_bar"]            = "Currency bar settings"
+
+lang["currency_bar_status"]     = "    Currently on: "

@@ -22,11 +22,11 @@ lang["target"]                  = "\n  >> Milyen pénznembe szeretnéd átválta
 
 lang["sub_menu_all"]            = "Összes megtekintése"
 lang["sub_menu_date"]           = "Dátum szerinti szűrés"
-lang["sub_menu_currency"]       = "Valuta szrinti szűrés"
+lang["sub_menu_currency"]       = "Valuta szerinti szűrés"
 
 lang["ask_date"]                = "  >> Kérlek add meg a dátumot! (ÉÉÉÉ-HH-NN) <<"
 lang["ask_currency"]            = "  >> Kérlek add meg a pénznemet! <<"
-lang["table_title"]             = ">> Szűrés nélküli táblázat <<"
+lang["table_title"]             = " >> Szűrés nélküli táblázat <<"
 lang["item_counter"]            = " elem lett megtalálva."
 lang["all_item"]                = " darab összesen."
 
@@ -54,4 +54,9 @@ lang["english"]                 = "Angol"
 lang["current_lang"]            = "    Aktuális nyelv: "
 
 lang["mostly_used"]             = "Legtöbbet használt valuták: "
+lang["recently_used"]           = "Legutoljára használt valuták: "
 lang["no_recent_found"]         = "\n  >> Nem találhatóak korábbi átváltások. <<"
+
+lang["currency_bar"]            = "Valuta sáv beállításai"
+
+lang["currency_bar_status"]     = "    Jelenleg aktív: "

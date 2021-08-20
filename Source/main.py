@@ -26,8 +26,8 @@ def main():
 
 
 
-		main_menu = (l.lang["menu_item_exchange"], l.lang["menu_item_list_currency"] ,l.lang["menu_item_view"], l.lang["force_update"], l.lang["menu_item_settings"], l.lang["menu_item_help"], l.lang["menu_item_quit"])
-		func_list = [Functions.exchange, Functions.list, Functions.view, Functions.force_update, Functions.settings, Functions.help]
+		main_menu = (l.lang["menu_item_exchange"], l.lang["menu_item_list_currency"] ,l.lang["menu_item_view"], l.lang["menu_item_settings"], l.lang["menu_item_help"], l.lang["menu_item_quit"])
+		func_list = [Functions.exchange, Functions.list, Functions.view, Functions.settings, Functions.help]
 		os.system("clear")
 
 		width = os.get_terminal_size().columns

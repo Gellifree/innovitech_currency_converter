@@ -54,6 +54,23 @@ class Analizer:
         # az első eleme pedig azokat, amikbe átváltottunk
         return currency_list
 
+    @staticmethod
+    def calculate_last_five():
+        result = [
+            [],
+            []
+        ]
+        data = Analizer.generate_data()
+        data.reverse()
+        for d in data:
+            if(len(result[0]) < 5):
+                if d[0] not in result[0]:
+                    result[0].append(d[0])
+            if(len(result[1]) < 5):
+                if d[1] not in result[1]:
+                    result[1].append(d[1])
+        return result
+
 
 if __name__ == '__main__':
-    print(Analizer.calculate_mostly_used())
+    print(Analizer.calculate_last_five())

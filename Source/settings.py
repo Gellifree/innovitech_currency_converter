@@ -1,6 +1,8 @@
 settings = {}
 
 settings["language"]        = "hungarian"
+settings["last_or_most"]    = "mostly_used" # or "recently_used"
+
 settings["pref_start_curr"] = "undefined"
 settings["pref_end_curr"]   = []
 settings["list_multiple"]   = "off"

@@ -32,8 +32,14 @@ class Functions:
 
 		base = "unknown"
 
-		base_list = Analizer.calculate_mostly_used()[0]
-		InfoBar.draw(base_list)
+
+		if(s.settings["last_or_most"] == "mostly_used"):
+			base_list = Analizer.calculate_mostly_used()[0]
+			InfoBar.draw_mostly_used(base_list)
+		else:
+			base_list = Analizer.calculate_last_five()[0]
+			InfoBar.draw_recent(base_list)
+
 		while(ErrorHandler.valid_currency(base) == False):
 			print(Functions.l.lang["base"])
 			base = input("  >> ").upper()
@@ -44,8 +50,13 @@ class Functions:
 
 		target = "unknown"
 
-		base_list = Analizer.calculate_mostly_used()[1]
-		InfoBar.draw(base_list)
+		if(s.settings["last_or_most"] == "mostly_used"):
+			base_list = Analizer.calculate_mostly_used()[1]
+			InfoBar.draw_mostly_used(base_list)
+		else:
+			base_list = Analizer.calculate_last_five()[1]
+			InfoBar.draw_recent(base_list)
+
 		while(ErrorHandler.valid_currency(target) == False):
 			print(Functions.l.lang["target"])
 			target = input ("  >> ").upper()
@@ -173,9 +184,21 @@ class Functions:
 		print("recognise option")
 
 	@staticmethod
+	def set_currency_bar():
+		set_currency_menu = [Functions.l.lang["mostly_used"][:-2], Functions.l.lang["recently_used"][:-2]]
+
+		print(Functions.l.lang["currency_bar_status"] + Functions.l.lang[s.settings['last_or_most']][:-2] + "\n")
+		answer = MenuDrawer.draw(set_currency_menu)
+
+		if(answer == 0):
+			s.settings['last_or_most'] = "mostly_used"
+		elif(answer == 1):
+			s.settings['last_or_most'] = "recently_used"
+
+	@staticmethod
 	def settings():
-		settings_menu = [Functions.l.lang["settings_change_lang"], Functions.l.lang["settings_recognise"]]
-		settings_menu_func_list = [Functions.change_lang, Functions.recognise]
+		settings_menu = [Functions.l.lang["settings_change_lang"], Functions.l.lang["settings_recognise"], Functions.l.lang["currency_bar"]]
+		settings_menu_func_list = [Functions.change_lang, Functions.recognise, Functions.set_currency_bar]
 
 		answer = MenuDrawer.draw(settings_menu)
 
