@@ -1,4 +1,5 @@
-import unittest, error_handler
+import unittest
+import error_handler
 
 class TestErrorHandler(unittest.TestCase):
     def setUp(self):

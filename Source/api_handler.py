@@ -1,7 +1,9 @@
-import requests, os
+import requests
+import os
 
 class ApiHandler:
-    def checkStatus():
+    def checkStatus(self):
+
         pass
 
 

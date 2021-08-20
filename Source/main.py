@@ -5,7 +5,10 @@
 #
 
 import os
-import menu, settings as s, functions, sys
+import menu
+import settings as s
+import functions
+import sys
 
 # Megfelelő nyelvi fájl betöltése
 if(s.settings["language"] == "hungarian"):

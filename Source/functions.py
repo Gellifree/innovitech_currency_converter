@@ -1,5 +1,8 @@
-import file_handler, settings as s, error_handler
-import converter, menu
+import file_handler
+import settings as s
+import error_handler
+import converter
+import menu
 
 # Megfelelő nyelvi fájl betöltése
 if(s.settings["language"] == "hungarian"):
@@ -17,6 +20,7 @@ class Functions():
 		self.c = converter.Converter()
 		self.md = menu.MenuDrawer()
 		self.eh = error_handler.ErrorHandler()
+		self.fh = file_handler.FileHandler()
 
 	def exchange(self):
 		#Hibakezelés később
@@ -50,17 +54,14 @@ class Functions():
 				print(l.lang["check_currency_list"])
 
 
-
-		fh = file_handler.FileHandler()
-		fh.save_exchange(base, target, value)
+		self.fh.save_exchange(base, target, value)
 
 		print(l.lang["result"], self.c.convert(base, target, value))
 
 
 	def print_header(self):
 		print()
-		fh = file_handler.FileHandler()
-		dataSet = fh.read_saved_conversions()
+		dataSet = self.fh.read_saved_conversions()
 
 		for headerTitle in next(dataSet):
 			if(headerTitle == 'date'):
@@ -74,8 +75,7 @@ class Functions():
 
 	def view_all(self):
 		counter = 0
-		fh = file_handler.FileHandler()
-		dataSet = fh.read_saved_conversions()
+		dataSet = self.fh.read_saved_conversions()
 		print(l.lang["table_title"])
 		self.print_header()
 		next(dataSet)
@@ -90,8 +90,7 @@ class Functions():
 
 	def view_by_date(self, date):
 		counter = 0
-		fh = file_handler.FileHandler()
-		dataSet = fh.read_saved_conversions()
+		dataSet = self.fh.read_saved_conversions()
 		self.print_header()
 		for data in dataSet:
 			if(data[0] == date):
@@ -105,8 +104,7 @@ class Functions():
 
 	def view_by_currency(self, currency):
 		counter = 0
-		fh = file_handler.FileHandler()
-		dataSet = fh.read_saved_conversions()
+		dataSet = self.fh.read_saved_conversions()
 		self.print_header()
 		for data in dataSet:
 			if(data[1] == currency or data[2] == currency):
@@ -139,8 +137,7 @@ class Functions():
 				subMenuFuncList[answer](currency)
 
 	def list(self):
-		fh = file_handler.FileHandler()
-		dataSet = fh.read_symbols()['symbols']
+		dataSet = self.fh.read_symbols()['symbols']
 		counter = 0
 		for data in dataSet:
 			print(data + " - " + dataSet[data])
