@@ -1,6 +1,6 @@
 settings = {}
 
-settings["language"]        = "english"
+settings["language"]        = "hungarian"
 settings["pref_start_curr"] = "undefined"
 settings["pref_end_curr"]   = []
 settings["list_multiple"]   = "off"

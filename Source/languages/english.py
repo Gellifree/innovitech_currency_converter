@@ -14,6 +14,7 @@ lang["menu_item_settings"]      = "Settings"
 lang["menu_item_help"]          = "Help"
 lang["menu_item_quit"]          = "Exit"
 lang["menu_item_list_currency"] = "List all currency"
+lang["force_update"]            = "Force update data"
 
 lang["value"]                   = "  >> Please enter the value you need to convert! <<"
 lang["base"]                    = "\n  >> What is the currency of the entered value? <<"
@@ -43,3 +44,11 @@ lang["update_failed"]           = "  >>> Update failed! <<<"
 
 lang["status_up_to_date"]       = "data is up to date"
 lang["status_old"]              = "data is not up to date!"
+
+lang["settings_change_lang"]    = "Change language"
+lang["settings_recognise"]      = "Automatic recognise"
+
+lang["hungarian"]               = "Hungarian"
+lang["english"]                 = "English"
+
+lang["current_lang"]            = "   Current language: "

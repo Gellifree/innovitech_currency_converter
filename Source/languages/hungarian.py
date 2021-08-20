@@ -14,6 +14,7 @@ lang["menu_item_settings"]      = "Beállítások"
 lang["menu_item_help"]          = "Segítség"
 lang["menu_item_quit"]          = "Kilépés"
 lang["menu_item_list_currency"] = "Összes valuta listázása"
+lang["force_update"]            = "Erőltetett frissítése az adatoknak"
 
 lang["value"]                   = "  >> Kérlek add meg az átváltandó értéket! <<"
 lang["base"]                    = "\n  >> Milyen pénznemben értelmezett az összeg? <<"
@@ -35,7 +36,7 @@ lang["not_a_currency"]          = "  >>> A beírt valuta nem található! <<<"
 lang["result"]                  = "\n  Az eredmény: "
 lang["check_currency_list"]     = "  >>> Ellenőrizd az \033[1m Összes valuta listázása \033[0m menüpontot! <<<"
 
-lang["no_update_needed"]        = "  >> Nincs szükség az adatok frissíŧésére! <<"
+lang["no_update_needed"]        = "  >> Nincs szükség az adatok frissítésére! <<"
 lang["update_needed"]           = "  >>> Szükség van az adatok frissítésére! <<<"
 
 lang["update_succes"]           = "  >> Frissítés sikeres! <<"
@@ -43,3 +44,11 @@ lang["update_failed"]           = "  >>> Frissítés sikertelen! <<<"
 
 lang["status_up_to_date"]       = "adatok naprakészek"
 lang["status_old"]              = "az adatok nem naprakészek!"
+
+lang["settings_change_lang"]    = "Nyelv megváltoztatása"
+lang["settings_recognise"]      = "Automatikus felismerés"
+
+lang["hungarian"]               = "Magyar"
+lang["english"]                 = "Angol"
+
+lang["current_lang"]            = "   Aktuális nyelv: "
