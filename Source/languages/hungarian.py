@@ -34,3 +34,12 @@ lang["not_a_currency"]          = "  >>> A beírt valuta nem található! <<<"
 
 lang["result"]                  = "\n  Az eredmény: "
 lang["check_currency_list"]     = "  >>> Ellenőrizd az \033[1m Összes valuta listázása \033[0m menüpontot! <<<"
+
+lang["no_update_needed"]        = "  >> Nincs szükség az adatok frissíŧésére! <<"
+lang["update_needed"]           = "  >>> Szükség van az adatok frissítésére! <<<"
+
+lang["update_succes"]           = "  >> Frissítés sikeres! <<"
+lang["update_failed"]           = "  >>> Frissítés sikertelen! <<<"
+
+lang["status_up_to_date"]       = "adatok naprakészek"
+lang["status_old"]              = "az adatok nem naprakészek!"

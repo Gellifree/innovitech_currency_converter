@@ -9,6 +9,7 @@ import menu
 import settings as s
 import functions
 import sys
+import api_handler
 
 # Megfelelő nyelvi fájl betöltése
 if(s.settings["language"] == "hungarian"):
@@ -21,9 +22,12 @@ else:
 
 md = menu.MenuDrawer()
 f = functions.Functions()
+ah = api_handler.ApiHandler()
 
 
 def main():
+	ah.refresh_data()
+
 	main_menu = (l.lang["menu_item_exchange"], l.lang["menu_item_list_currency"] ,l.lang["menu_item_view"], l.lang["menu_item_settings"], l.lang["menu_item_help"], l.lang["menu_item_quit"])
 	func_list = [f.exchange, f.list, f.view, f.settings, f.help]
 
@@ -33,7 +37,7 @@ def main():
 
 		width = os.get_terminal_size().columns
 		middle_text = l.lang["title"] + "\n"
-		print("2021 Kovács Norbert", end="")
+		print("2021 Kovács Norbert - " + ah.status, end="")
 		print(middle_text.center(width-(2*len(middle_text))))
 		answer = md.draw(main_menu)
 

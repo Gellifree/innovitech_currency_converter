@@ -34,3 +34,12 @@ lang["not_a_currency"]          = "  >>> I can't find the currency you typed! <<
 
 lang["result"]                  = "\n  The result: "
 lang["check_currency_list"]     = "  >>> Check the \033[1m List all currency \033[0m menupoint! <<<"
+
+lang["no_update_needed"]        = "  >> There is no need to update the data! <<"
+lang["update_needed"]           = "  >>> Data need to be updated! <<<"
+
+lang["update_succes"]           = "  >> Update was succesfull! <<"
+lang["update_failed"]           = "  >>> Update failed! <<<"
+
+lang["status_up_to_date"]       = "data is up to date"
+lang["status_old"]              = "data is not up to date!"
