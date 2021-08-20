@@ -71,7 +71,7 @@ class Functions:
 		counter = 0
 		data_set = FileHandler.read_saved_conversions()
 		print(Functions.l.lang["table_title"])
-		print_header()
+		Functions.print_header()
 		next(data_set)
 		for data in data_set:
 			print("  ", end='')
@@ -87,7 +87,7 @@ class Functions:
 	def view_by_date(date):
 		counter = 0
 		data_set = FileHandler.read_saved_conversions()
-		print_header()
+		Functions.print_header()
 		for data in data_set:
 			if(data[0] == date):
 				print("  ", end='')
@@ -102,7 +102,7 @@ class Functions:
 	def view_by_currency(currency):
 		counter = 0
 		data_set = FileHandler.read_saved_conversions()
-		print_header()
+		Functions.print_header()
 		for data in data_set:
 			if(data[1] == currency or data[2] == currency):
 				print("  ", end='')
@@ -116,7 +116,7 @@ class Functions:
 	@staticmethod
 	def view():
 		sub_menu = [Functions.l.lang["sub_menu_all"], Functions.l.lang["sub_menu_date"], Functions.l.lang["sub_menu_currency"]]
-		sub_menu_func_list = [view_all, view_by_date, view_by_currency]
+		sub_menu_func_list = [Functions.view_all, Functions.view_by_date, Functions.view_by_currency]
 
 		answer = MenuDrawer.draw(sub_menu)
 		if(answer == -2 or answer == -3):
