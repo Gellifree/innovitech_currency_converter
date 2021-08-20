@@ -5,7 +5,7 @@ class ErrorHandler():
         self.fh = file_handler.FileHandler()
         data = self.fh.readSymbols()['symbols']
         for curr in data:
-            if(curr == currency.upper()):
+            if(curr == currency):
                 return True
         return False
 
