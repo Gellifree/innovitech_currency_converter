@@ -21,7 +21,7 @@ f = functions.Functions()
 
 
 def main():
-	mainMenu = (l.lang["menu_item_exchange"], l.lang["menu_item_list_currency"] ,l.lang["menu_item_view"], l.lang["menu_item_settings"], l.lang["menu_item_help"], l.lang["menu_item_quit"])
+	main_menu = (l.lang["menu_item_exchange"], l.lang["menu_item_list_currency"] ,l.lang["menu_item_view"], l.lang["menu_item_settings"], l.lang["menu_item_help"], l.lang["menu_item_quit"])
 	func_list = [f.exchange, f.list, f.view, f.settings, f.help]
 
 	answer = 0
@@ -29,15 +29,15 @@ def main():
 		os.system("clear")
 
 		width = os.get_terminal_size().columns
-		middleText = l.lang["title"] + "\n"
+		middle_text = l.lang["title"] + "\n"
 		print("2021 Kovács Norbert", end="")
-		print(middleText.center(width-(2*len(middleText))))
-		answer = md.draw(mainMenu)
+		print(middle_text.center(width-(2*len(middle_text))))
+		answer = md.draw(main_menu)
 
 		if(answer == -2 or answer == -3):
 			input(l.lang["press_enter"])
 		elif(answer != -1):
-			print(" >> " + mainMenu[answer] + " <<\n")
+			print(" >> " + main_menu[answer] + " <<\n")
 			func_list[answer]()
 			input(l.lang["done"])
 		else:

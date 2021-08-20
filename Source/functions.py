@@ -22,45 +22,45 @@ class Functions():
 		#Hibakezelés később
 
 		value = "unknown"
-		while(self.eh.validNumber(value) == False):
+		while(self.eh.valid_number(value) == False):
 			print(l.lang["value"])
 			value = input("  >> ")
 
-			if(self.eh.validNumber(value)):
+			if(self.eh.valid_number(value)):
 				value = float(value)
 			else:
 				print(l.lang["not_a_number"])
 
 
 		base = "unknown"
-		while(self.eh.validCurrency(base) == False):
+		while(self.eh.valid_currency(base) == False):
 			print(l.lang["base"])
 			base = input("  >> ").upper()
-			if(self.eh.validCurrency(base) == False):
+			if(self.eh.valid_currency(base) == False):
 				print(l.lang["not_a_currency"])
 				print(l.lang["check_currency_list"])
 
 
 		target = "unknown"
-		while(self.eh.validCurrency(target) == False):
+		while(self.eh.valid_currency(target) == False):
 			print(l.lang["target"])
 			target = input ("  >> ").upper()
-			if(self.eh.validCurrency(target) == False):
+			if(self.eh.valid_currency(target) == False):
 				print(l.lang["not_a_currency"])
 				print(l.lang["check_currency_list"])
 
 
 
 		fh = file_handler.FileHandler()
-		fh.saveExchange(base, target, value)
+		fh.save_exchange(base, target, value)
 
 		print(l.lang["result"], self.c.convert(base, target, value))
 
 
-	def printHeader(self):
+	def print_header(self):
 		print()
 		fh = file_handler.FileHandler()
-		dataSet = fh.readSavedConversions()
+		dataSet = fh.read_saved_conversions()
 
 		for headerTitle in next(dataSet):
 			if(headerTitle == 'date'):
@@ -72,12 +72,12 @@ class Functions():
 				print(headerTitle + "\t", end="")
 		print()
 
-	def viewAll(self):
+	def view_all(self):
 		counter = 0
 		fh = file_handler.FileHandler()
-		dataSet = fh.readSavedConversions()
+		dataSet = fh.read_saved_conversions()
 		print(l.lang["table_title"])
-		self.printHeader()
+		self.print_header()
 		next(dataSet)
 		for data in dataSet:
 			print("  ", end='')
@@ -88,11 +88,11 @@ class Functions():
 		print("\n  " + str(counter) + l.lang["all_item"])
 		print()
 
-	def viewByDate(self, date):
+	def view_by_date(self, date):
 		counter = 0
 		fh = file_handler.FileHandler()
-		dataSet = fh.readSavedConversions()
-		self.printHeader()
+		dataSet = fh.read_saved_conversions()
+		self.print_header()
 		for data in dataSet:
 			if(data[0] == date):
 				print("  ", end='')
@@ -103,11 +103,11 @@ class Functions():
 		print("\n  " + str(counter) + l.lang["item_counter"])
 		print()
 
-	def viewByCurrency(self, currency):
+	def view_by_currency(self, currency):
 		counter = 0
 		fh = file_handler.FileHandler()
-		dataSet = fh.readSavedConversions()
-		self.printHeader()
+		dataSet = fh.read_saved_conversions()
+		self.print_header()
 		for data in dataSet:
 			if(data[1] == currency or data[2] == currency):
 				print("  ", end='')
@@ -120,7 +120,7 @@ class Functions():
 
 	def view(self):
 		subMenu = [l.lang["sub_menu_all"], l.lang["sub_menu_date"], l.lang["sub_menu_currency"]]
-		subMenuFuncList = [self.viewAll, self.viewByDate, self.viewByCurrency]
+		subMenuFuncList = [self.view_all, self.view_by_date, self.view_by_currency]
 
 		answer = self.md.draw(subMenu)
 		if(answer == -2 or answer == -3):
@@ -140,7 +140,7 @@ class Functions():
 
 	def list(self):
 		fh = file_handler.FileHandler()
-		dataSet = fh.readSymbols()['symbols']
+		dataSet = fh.read_symbols()['symbols']
 		counter = 0
 		for data in dataSet:
 			print(data + " - " + dataSet[data])

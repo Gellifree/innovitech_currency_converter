@@ -4,11 +4,11 @@ class Converter():
     def __init__(self):
         self.fh = file_handler.FileHandler()
 
-    def convertFromEur(self, value, target):
-        return value * self.fh.readExchange()['rates'][target]
+    def convert_from_eur(self, value, target):
+        return value * self.fh.read_exchange()['rates'][target]
 
-    def convertToEur(self, value, base):
-        return value / self.fh.readExchange()['rates'][base]
+    def convert_to_eur(self, value, base):
+        return value / self.fh.read_exchange()['rates'][base]
 
     def convert(self, base, target, value):
         # Konvertáljuk át az értéket, a kiinduló alapból (base) Euróba
@@ -16,10 +16,10 @@ class Converter():
         # Majd adjuk vissza
 
         # Lehetne vizsgálni, hogy Euró e az alap, vagy a cél, és aszerint elágaztatni
-        return self.convertFromEur(self.convertToEur(value, base), target)
+        return self.convert_from_eur(self.convert_to_eur(value, base), target)
 
 if __name__ == '__main__':
     c = Converter()
-    print(c.convertFromEur(10, 'HUF'))
-    print(c.convertToEur(12000, 'HUF'))
+    print(c.convert_from_eur(10, 'HUF'))
+    print(c.convert_to_eur(12000, 'HUF'))
     print(c.convert('EUR', 'HUF', 100))

@@ -1,5 +1,10 @@
 import requests, os
 
+class ApiHandler:
+    def checkStatus():
+        pass
+
+
 if(False):
     url = "http://api.exchangeratesapi.io/v1/latest?access_key=0f0626556ccdfcbf4b712ee1e7086914"
     response = requests.request("GET", url)
