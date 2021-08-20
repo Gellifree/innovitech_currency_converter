@@ -5,47 +5,41 @@
 #
 
 import os
-import menu
-import settings as s
-import functions
 import sys
-import api_handler
-import language_handler
+import settings as s
+from menu import MenuDrawer
+from functions import Functions
+from api_handler import ApiHandler
+from language_handler import LanguageHandler
 
 
-
-
-
-md = menu.MenuDrawer()
-f = functions.Functions()
-ah = api_handler.ApiHandler()
-lh = language_handler.LanguageHandler()
-l = lh.reimport_language()
+l = LanguageHandler.reimport_language()
 
 def main():
-	ah.refresh_data()
+	ApiHandler.refresh_data()
 
 	answer = 0
 	while(answer != -1):
-		l = lh.reimport_language()
-		f.update_language()
-		ah.update_language()
 
+		MenuDrawer.update_language()
+		Functions.update_language()
+		ApiHandler.update_language()
+		l = LanguageHandler.reimport_language()
 
 
 
 		main_menu = (l.lang["menu_item_exchange"], l.lang["menu_item_list_currency"] ,l.lang["menu_item_view"], l.lang["force_update"], l.lang["menu_item_settings"], l.lang["menu_item_help"], l.lang["menu_item_quit"])
-		func_list = [f.exchange, f.list, f.view, f.force_update, f.settings, f.help]
+		func_list = [Functions.exchange, Functions.list, Functions.view, Functions.force_update, Functions.settings, Functions.help]
 		os.system("clear")
 
 		width = os.get_terminal_size().columns
 		middle_text = l.lang["title"] + "\n"
-		print("2021 Kovács Norbert - " + ah.status, end="")
+		print("2021 Kovács Norbert - " + ApiHandler.status, end="")
 		print(middle_text.center(width-(2*len(middle_text))))
-		answer = md.draw(main_menu)
+		answer = MenuDrawer.draw(main_menu)
 
 		if(answer == -2 or answer == -3):
-			print(l.lang["press_enter"])
+			input(l.lang["press_enter"])
 		elif(answer != -1):
 			print(" >> " + main_menu[answer] + " <<\n")
 			func_list[answer]()

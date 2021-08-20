@@ -2,16 +2,16 @@ import importlib
 import settings as s
 
 class LanguageHandler:
-    def __init__(self):
-        self.l = ""
+    l = ""
 
-    def reimport_language(self):
+    @staticmethod
+    def reimport_language():
         importlib.invalidate_caches()
         if(s.settings["language"] == "hungarian"):
-            self.l = importlib.import_module("languages.hungarian")
+            LanguageHandler.l = importlib.import_module("languages.hungarian")
         elif(s.settings["language"] == "english"):
-            self.l = importlib.import_module("languages.english")
+            LanguageHandler.l = importlib.import_module("languages.english")
         else:
             # nem értelmezhető nyelvi beállítás
-            self.l = importlib.import_module("languages.hungarian")
-        return self.l
+            LanguageHandler.l = importlib.import_module("languages.hungarian")
+        return LanguageHandler.l

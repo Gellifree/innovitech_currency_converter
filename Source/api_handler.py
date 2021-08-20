@@ -1,48 +1,53 @@
 import requests
 import os
-import file_handler
+from  file_handler import FileHandler
 from datetime import date
 import settings as s
-import language_handler
+from language_handler import LanguageHandler
 
 
 class ApiHandler:
-	def __init__(self):
-		self.fh = file_handler.FileHandler()
-		self.lh = language_handler.LanguageHandler()
-		self.l = self.lh.reimport_language()
-		self.status = self.l.lang["status_old"]
+	l = LanguageHandler.reimport_language()
+	status = l.lang["status_old"]
 
-	def update_language(self):
-		self.l = self.lh.reimport_language()
+	@staticmethod
+	def update_language():
+		ApiHandler.l = LanguageHandler.reimport_language()
+		ApiHandler.check_status()
 
-	def check_status(self):
+
+	@staticmethod
+	def check_status():
 		today = date.today()
-		file_date = self.fh.read_exchange()['date']
+		file_date = FileHandler.read_exchange()['date']
 		if(str(today) != str(file_date)):
-			self.status = self.l.lang["status_old"]
+			ApiHandler.status = ApiHandler.l.lang["status_old"]
 		else:
-			self.status = self.l.lang["status_up_to_date"]
-		return self.status
+			ApiHandler.status = ApiHandler.l.lang["status_up_to_date"]
+		return ApiHandler.status
 
-	def request_api(self):
+
+	@staticmethod
+	def request_api():
 		url = "http://api.exchangeratesapi.io/v1/latest?access_key=0f0626556ccdfcbf4b712ee1e7086914"
 		response = requests.request("GET", url)
 		if(response.ok):
-			print(self.l.lang["update_succes"])
+			print(ApiHandler.l.lang["update_succes"])
 			f = open("data/exchange_rates.json", "w")
 			f.write(response.text)
 			f.close()
-			self.status = self.l.lang["status_up_to_date"]
+			ApiHandler.status = ApiHandler.l.lang["status_up_to_date"]
 		else:
-			print(self.l.lang["update_failed"])
+			print(ApiHandler.l.lang["update_failed"])
 
-	def refresh_data(self):
-		if(self.check_status() == self.l.lang["status_old"]):
-			print(self.l.lang["update_needed"])
-			self.request_api()
-		elif(self.check_status() == self.l.lang["status_up_to_date"]):
-			print(self.l.lang["no_update_needed"])
+
+	@staticmethod
+	def refresh_data():
+		if(ApiHandler.check_status() == ApiHandler.l.lang["status_old"]):
+			print(ApiHandler.l.lang["update_needed"])
+			ApiHandler.request_api()
+		elif(ApiHandler.check_status() == ApiHandler.l.lang["status_up_to_date"]):
+			print(ApiHandler.l.lang["no_update_needed"])
 
 
 if(False):

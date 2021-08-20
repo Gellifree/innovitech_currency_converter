@@ -1,26 +1,29 @@
 import json
 import os
 from datetime import date
-import converter
+
 import csv
 
-class FileHandler():
-    def read_exchange(self):
+class FileHandler:
+    @staticmethod
+    def read_exchange():
         with open("data/exchange_rates.json") as json_file:
             return json.load(json_file)
-
-    def read_symbols(self):
+    @staticmethod
+    def read_symbols():
         with open("data/symbols.json") as json_file:
             return json.load(json_file)
 
-    def save_exchange(self, base, target, value):
-        c = converter.Converter()
+    @staticmethod
+    def save_exchange(base, target, value):
+        from converter import Converter
         f = open("data/saved_conversions.csv", 'a')
-        data = str(date.today()) + ';' + base + ';' + target + ';' + str(value) + ';' + str(c.convert(base, target, value)) + '\n'
+        data = str(date.today()) + ';' + base + ';' + target + ';' + str(value) + ';' + str(Converter.convert(base, target, value)) + '\n'
         f.write(data)
         f.close()
 
-    def read_saved_conversions(self):
+    @staticmethod
+    def read_saved_conversions():
         csv_path = "data/saved_conversions.csv"
         with open(csv_path) as saved_conversions:
             reader = csv.reader(saved_conversions)
@@ -38,10 +41,3 @@ class FileHandler():
                 data = ''
                 yield data_list
                 data_list = []
-
-
-if __name__ == '__main__':
-    fh = FileHandler()
-    x = fh.read_saved_conversions()
-    for data in x:
-        print(data)
