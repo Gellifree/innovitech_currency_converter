@@ -27,10 +27,12 @@ A program bővítésre került a Funkció modulból az egyszerű átváltással 
 
  A mai napon egyenlőre inkább a kódbázis újraírása kapott nagyobb szerepet, nem a követelménylista.
 
+ Elkészült az elemző, ami megkeresi a leggyakrabban használt, és az öt legutoljára használt valutát, és ezek között tudunk állítani a beállításokban, hogy melyiket szeretnénk használni.
+
  - [X] NY1 - Futási időben cserélhető nyelv, viszont nem menti le az ujraindulás után alaphelyeztbe áll
  - [X] F5 - Optimalizált API hívás megvalósítva
- - [ ] F4 - Az átváltás nem listából történik, hanem begépelés szerint, keresni kell egy alkalmas módszert a megvalósításra
+ - [X] F4 - Nem csak az utoljára, hanem a leggyakrabban használt, maximum 5 valutát is választhatjuk a beállításokban
  - [ ] K1 - Az automatikus felismerés kapcsán, sok meglévő függvényt kell újragondolni
- - [ ] K2 - Össze kell gyűjteni a legtöbbet / utoljára használt valutákat
+ - [ ] K2 - A beállítások szerint alapesetben megjeleníthetőek lehetnek az értékek, de ne vegyük el a felhasználótól a lehetőséget, hogy maga adjon meg egy valuta típust.
  - [ ] K3 - Kiinduló és cél valuták megvalósításának prioritása csökkent
  - [ ] K4 - Kényelmi funkciók megvalósítását követi
