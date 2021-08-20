@@ -21,8 +21,8 @@ class FileHandler():
         f.close()
 
     def read_saved_conversions(self):
-        csvPath = "data/saved_conversions.csv"
-        with open(csvPath) as saved_conversions:
+        csv_path = "data/saved_conversions.csv"
+        with open(csv_path) as saved_conversions:
             reader = csv.reader(saved_conversions)
 
             data_list = []

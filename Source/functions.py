@@ -61,9 +61,9 @@ class Functions():
 
 	def print_header(self):
 		print()
-		dataSet = self.fh.read_saved_conversions()
+		data_set = self.fh.read_saved_conversions()
 
-		for headerTitle in next(dataSet):
+		for headerTitle in next(data_set):
 			if(headerTitle == 'date'):
 				print("  " + headerTitle + "\t\t", end="")
 			elif(headerTitle == 'result'):
@@ -75,11 +75,11 @@ class Functions():
 
 	def view_all(self):
 		counter = 0
-		dataSet = self.fh.read_saved_conversions()
+		data_set = self.fh.read_saved_conversions()
 		print(l.lang["table_title"])
 		self.print_header()
-		next(dataSet)
-		for data in dataSet:
+		next(data_set)
+		for data in data_set:
 			print("  ", end='')
 			for detail in data:
 				print(detail + "\t", end="")
@@ -90,9 +90,9 @@ class Functions():
 
 	def view_by_date(self, date):
 		counter = 0
-		dataSet = self.fh.read_saved_conversions()
+		data_set = self.fh.read_saved_conversions()
 		self.print_header()
-		for data in dataSet:
+		for data in data_set:
 			if(data[0] == date):
 				print("  ", end='')
 				for detail in data:
@@ -104,9 +104,9 @@ class Functions():
 
 	def view_by_currency(self, currency):
 		counter = 0
-		dataSet = self.fh.read_saved_conversions()
+		data_set = self.fh.read_saved_conversions()
 		self.print_header()
-		for data in dataSet:
+		for data in data_set:
 			if(data[1] == currency or data[2] == currency):
 				print("  ", end='')
 				for detail in data:
@@ -117,30 +117,30 @@ class Functions():
 		print()
 
 	def view(self):
-		subMenu = [l.lang["sub_menu_all"], l.lang["sub_menu_date"], l.lang["sub_menu_currency"]]
-		subMenuFuncList = [self.view_all, self.view_by_date, self.view_by_currency]
+		sub_menu = [l.lang["sub_menu_all"], l.lang["sub_menu_date"], l.lang["sub_menu_currency"]]
+		sub_menu_func_list = [self.view_all, self.view_by_date, self.view_by_currency]
 
-		answer = self.md.draw(subMenu)
+		answer = self.md.draw(sub_menu)
 		if(answer == -2 or answer == -3):
 			input(l.lang["press_enter"])
 		elif(answer != -1):
-			print(" >> " + subMenu[answer] + " <<\n")
+			print(" >> " + sub_menu[answer] + " <<\n")
 			if(answer == 0):
-				subMenuFuncList[answer]()
+				sub_menu_func_list[answer]()
 			if(answer == 1):
 				print(l.lang["ask_date"])
 				date = input("  >> ")
-				subMenuFuncList[answer](date)
+				sub_menu_func_list[answer](date)
 			if(answer == 2):
 				print(l.lang["ask_currency"])
 				currency = input("  >> ").upper()
-				subMenuFuncList[answer](currency)
+				sub_menu_func_list[answer](currency)
 
 	def list(self):
-		dataSet = self.fh.read_symbols()['symbols']
+		data_set = self.fh.read_symbols()['symbols']
 		counter = 0
-		for data in dataSet:
-			print(data + " - " + dataSet[data])
+		for data in data_set:
+			print(data + " - " + data_set[data])
 
 		print("\n")
 
