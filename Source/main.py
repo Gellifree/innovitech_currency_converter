@@ -13,11 +13,9 @@ from api_handler import ApiHandler
 from language_handler import LanguageHandler
 
 
-l = LanguageHandler.reimport_language()
-
 def main():
 	ApiHandler.refresh_data()
-
+	l = LanguageHandler.reimport_language()
 	answer = 0
 	while(answer != -1):
 
@@ -35,7 +33,7 @@ def main():
 		width = os.get_terminal_size().columns
 		middle_text = l.lang["title"] + "\n"
 		print("2021 Kovács Norbert - " + ApiHandler.status, end="")
-		print(middle_text.center(width-(2*len(middle_text))))
+		print(middle_text.center(width-(4*len(middle_text))))
 		answer = MenuDrawer.draw(main_menu)
 
 		if(answer == -2 or answer == -3):

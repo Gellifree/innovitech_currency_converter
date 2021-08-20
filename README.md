@@ -2,4 +2,4 @@
 
 Valuta átváltó alkalmazás
 
-Részletes dokumentáció a **/Documentation** mappában található.
+Részletes leírás a **/Documentation** mappában található.

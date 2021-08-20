@@ -34,7 +34,7 @@ lang["not_a_number"]            = "  >>> A beírt adat nem konvertálható szám
 lang["not_a_currency"]          = "  >>> A beírt valuta nem található! <<<"
 
 lang["result"]                  = "\n  Az eredmény: "
-lang["check_currency_list"]     = "  >>> Ellenőrizd az \033[1m Összes valuta listázása \033[0m menüpontot! <<<"
+lang["check_currency_list"]     = "  >>> Ellenőrizd az\033[1m Összes valuta listázása\033[0m menüpontot! <<<"
 
 lang["no_update_needed"]        = "  >> Nincs szükség az adatok frissítésére! <<"
 lang["update_needed"]           = "  >>> Szükség van az adatok frissítésére! <<<"
@@ -42,7 +42,7 @@ lang["update_needed"]           = "  >>> Szükség van az adatok frissítésére
 lang["update_succes"]           = "  >> Frissítés sikeres! <<"
 lang["update_failed"]           = "  >>> Frissítés sikertelen! <<<"
 
-lang["status_up_to_date"]       = "adatok naprakészek"
+lang["status_up_to_date"]       = "az adatok naprakészek"
 lang["status_old"]              = "az adatok nem naprakészek!"
 
 lang["settings_change_lang"]    = "Nyelv megváltoztatása"
@@ -51,4 +51,7 @@ lang["settings_recognise"]      = "Automatikus felismerés"
 lang["hungarian"]               = "Magyar"
 lang["english"]                 = "Angol"
 
-lang["current_lang"]            = "   Aktuális nyelv: "
+lang["current_lang"]            = "    Aktuális nyelv: "
+
+lang["mostly_used"]             = "Legtöbbet használt valuták: "
+lang["no_recent_found"]         = "\n  >> Nem találhatóak korábbi átváltások. <<"

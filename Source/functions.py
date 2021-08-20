@@ -5,7 +5,8 @@ from api_handler import ApiHandler
 from converter import Converter
 from menu import MenuDrawer
 from language_handler import LanguageHandler
-
+from info_bar import InfoBar
+from analizer import Analizer
 
 # A menühöz tartozó funkciók
 class Functions:
@@ -14,6 +15,7 @@ class Functions:
 	@staticmethod
 	def update_language():
 		Functions.l = LanguageHandler.reimport_language()
+		InfoBar.update_language()
 
 	@staticmethod
 	def exchange():
@@ -29,6 +31,9 @@ class Functions:
 
 
 		base = "unknown"
+
+		base_list = Analizer.calculate_mostly_used()[0]
+		InfoBar.draw(base_list)
 		while(ErrorHandler.valid_currency(base) == False):
 			print(Functions.l.lang["base"])
 			base = input("  >> ").upper()
@@ -38,6 +43,9 @@ class Functions:
 
 
 		target = "unknown"
+
+		base_list = Analizer.calculate_mostly_used()[1]
+		InfoBar.draw(base_list)
 		while(ErrorHandler.valid_currency(target) == False):
 			print(Functions.l.lang["target"])
 			target = input ("  >> ").upper()
@@ -174,7 +182,7 @@ class Functions:
 		if(answer == -2 or answer == -3):
 			print(Functions.l.lang["press_enter"])
 		elif(answer != -1):
-			print(">> " + settings_menu[answer] + " <<\n")
+			print(" >> " + settings_menu[answer] + " <<\n")
 			settings_menu_func_list[answer]()
 
 	@staticmethod

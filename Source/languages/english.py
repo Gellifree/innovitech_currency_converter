@@ -34,7 +34,7 @@ lang["not_a_number"]            = "  >>> The entered data cannot be converted in
 lang["not_a_currency"]          = "  >>> I can't find the currency you typed! <<<"
 
 lang["result"]                  = "\n  The result: "
-lang["check_currency_list"]     = "  >>> Check the \033[1m List all currency \033[0m menupoint! <<<"
+lang["check_currency_list"]     = "  >>> Check the\033[1m List all currency\033[0m menupoint! <<<"
 
 lang["no_update_needed"]        = "  >> There is no need to update the data! <<"
 lang["update_needed"]           = "  >>> Data need to be updated! <<<"
@@ -51,4 +51,7 @@ lang["settings_recognise"]      = "Automatic recognise"
 lang["hungarian"]               = "Hungarian"
 lang["english"]                 = "English"
 
-lang["current_lang"]            = "   Current language: "
+lang["current_lang"]            = "    Current language: "
+
+lang["mostly_used"]             = "Mostly used currencies: "
+lang["no_recent_found"]         = "\n  >> No exchange history was found. <<"

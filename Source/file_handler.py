@@ -1,7 +1,6 @@
 import json
 import os
 from datetime import date
-
 import csv
 
 class FileHandler:
@@ -9,6 +8,7 @@ class FileHandler:
     def read_exchange():
         with open("data/exchange_rates.json") as json_file:
             return json.load(json_file)
+
     @staticmethod
     def read_symbols():
         with open("data/symbols.json") as json_file:
