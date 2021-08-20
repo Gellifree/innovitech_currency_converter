@@ -25,3 +25,12 @@ A program bővítésre került a Funkció modulból az egyszerű átváltással 
  - [ ] K2 - A jelenlegi rendszer hibatűrésének javítása után lesz prioritás
  - [ ] K3 - A jelenlegi rendszer hibatűrésének javítása után lesz prioritás
  - [ ] K4 - Kényelmi funkciók megvalósítását követi
+
+ **2021-08-20**
+
+ Javításra került a nyelvesítés importálása, megszüntetve a redundanciát. Az osztályok refaktorálás alá kerültek, és statikussá változtak a függvények, így nem kell felesleges példányokon keresztül elérnünk a függvényeket, amik miatt a nyelvesítés nem működött. Futási időben beállítható a nyelv, ami azonnal megváltozik, eddig, felderítetlen hiányosság nélkül. Ezenkívül az API hívások optimalizálva lettek, hogy minden nap friss adatokkal dolgozzunk, viszont egy nap, ne intézzünk több API hívást, mert szükségtelen. Amennyiben az API hívás sikertelen, nem veszítjük el a lementett adatokat, viszont a program jelzi, hogy az aktuális adatok, nem naprakészek.
+
+ A mai napon egyenlőre inkább a kódbázis újraírása kapott nagyobb szerepet, nem a követelménylista.
+
+ - [X] NY1 - Futási időben cserélhető nyelv, viszont nem menti le az ujraindulás után alaphelyeztbe áll
+ - [X] F5 - Optimalizált API hívás megvalósítva
