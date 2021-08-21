@@ -3,7 +3,7 @@ import csv
 
 class SettingsHandler:
     settings = {
-        'name': 'value',
+        'name': 'value'
     }
 
 

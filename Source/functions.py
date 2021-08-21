@@ -72,6 +72,22 @@ class Functions:
 
 
 	@staticmethod
+	def print_header_in_string():
+		result = "\n"
+		data_set = FileHandler.read_saved_conversions()
+
+		for header_title in next(data_set):
+			if(header_title == 'date'):
+				result += "  " + header_title + "\t\t"
+			elif(header_title == 'result'):
+				result += header_title + "\t\n"
+				result+= "  ------------------------------------------------------------"
+			else:
+				result += header_title + "\t"
+		result += "\n"
+		return result
+
+	@staticmethod
 	def print_header():
 		print()
 		data_set = FileHandler.read_saved_conversions()
@@ -86,52 +102,59 @@ class Functions:
 				print(header_title + "\t", end="")
 		print()
 
+
 	@staticmethod
 	def view_all():
 		counter = 0
 		data_set = FileHandler.read_saved_conversions()
-		print(Functions.l.lang["table_title"])
-		Functions.print_header()
+		header = Functions.print_header_in_string()
 		next(data_set)
+		buffer = ""
 		for data in data_set:
-			print("  ", end='')
+			buffer += "  "
 			for detail in data:
-				print(detail + "\t", end="")
+				buffer += detail + "\t"
 			counter += 1
-			print()
-		print("\n  " + str(counter) + Functions.l.lang["all_item"])
-		print()
+			buffer += "\n"
+		if(counter > 0):
+			print(Functions.l.lang["table_title"])
+			print(header + buffer)
+		print("  " + str(counter) + Functions.l.lang["all_item"])
 
 
 	@staticmethod
 	def view_by_date(date):
 		counter = 0
 		data_set = FileHandler.read_saved_conversions()
-		Functions.print_header()
+		header = Functions.print_header_in_string()
+		buffer = ""
 		for data in data_set:
 			if(data[0] == date):
-				print("  ", end='')
+				buffer += "  "
 				for detail in data:
-					print(detail + "\t", end="")
+					buffer += detail + "\t"
 				counter += 1
-				print()
+				buffer += "\n"
+		if(counter > 0):
+			print(header + buffer)
 		print("\n  " + str(counter) + Functions.l.lang["item_counter"])
-		print()
 
 	@staticmethod
 	def view_by_currency(currency):
 		counter = 0
 		data_set = FileHandler.read_saved_conversions()
-		Functions.print_header()
+		header = Functions.print_header_in_string()
+		buffer = ""
 		for data in data_set:
 			if(data[1] == currency or data[2] == currency):
-				print("  ", end='')
+				buffer += "  "
 				for detail in data:
-					print(detail + "\t", end="")
+					buffer += detail + "\t"
 				counter += 1
-				print()
+				buffer += "\n"
+		if(counter > 0):
+			print(header + buffer)
 		print("\n  " + str(counter) + Functions.l.lang["item_counter"])
-		print()
 
 	@staticmethod
 	def view():
@@ -216,3 +239,7 @@ class Functions:
 	@staticmethod
 	def help():
 		print("fourth function")
+
+
+if __name__ == '__main__':
+	Functions.view_all_with_buffer()

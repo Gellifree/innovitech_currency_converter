@@ -38,6 +38,10 @@ class ApiHandler:
 			f.close()
 			ApiHandler.status = ApiHandler.l.lang["status_up_to_date"]
 		else:
+			f = open("data/error_log", "a")
+			f.write("  >>> Error while updating <<<\n")
+			f.write("  Code:" + str(response.status_code) + "\n")
+			f.close()
 			print(ApiHandler.l.lang["update_failed"])
 
 
@@ -48,16 +52,6 @@ class ApiHandler:
 			ApiHandler.request_api()
 		elif(ApiHandler.check_status() == ApiHandler.l.lang["status_up_to_date"]):
 			print(ApiHandler.l.lang["no_update_needed"])
-
-
-if(False):
-    url = "http://api.exchangeratesapi.io/v1/latest?access_key=0f0626556ccdfcbf4b712ee1e7086914"
-    response = requests.request("GET", url)
-    print(response.text)
-
-    f = open("data/exchange_rates.json", "w")
-    f.write(response.text)
-    f.close()
 
 if(False):
     url = "http://api.exchangeratesapi.io/v1/symbols?access_key=0f0626556ccdfcbf4b712ee1e7086914"
