@@ -33,7 +33,7 @@ A program bővítésre került a Funkció modulból az egyszerű átváltással 
  - [X] F5 - Optimalizált API hívás megvalósítva
  - [X] F4 - Nem csak az utoljára, hanem a leggyakrabban használt, maximum 5 valutát is választhatjuk a beállításokban
 
- **2021.08.20**
+ **2021.08.21**
 
  Megvalósíŧásra került az automatikus felismerés, a beállítások lementése, és visszatöltése, funkciók ki és bekapcsolásának lehetősége. Ezenkívül újragondolásra kerültek a listázási nézetek, hogy üres táblázat esetén, ne jelenítsük meg a fejlécet. Az átváltásoknál lehetőségünk van bekapcsolni, hogy eredményként megjelenítse a legtöbbet/legutoljára használt cél valutákban, és hogy ezenkívül megadjunk egy valutát.
 
@@ -53,5 +53,3 @@ Ezzel az eredetileg elkészített követelménylista teljesítésre került.
  - Az előzmények törölhetőek
  - Amennyiben bekapcsoltuk hogy jelenítse meg a legutojára/legtöbbet használt valutákat, de nincs rendelkezésre álló adat, a program jelzi a felhasználónak.
  - Minden kilépésnél elmentjük a program futása közben történt beállítás változásokat, hogy azokat visszatölthessük újraindulás után.
-
- 
