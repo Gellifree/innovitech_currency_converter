@@ -1,9 +1,11 @@
 import unittest
-import error_handler
+import sys
+from currency import error_handler
 
 class TestErrorHandler(unittest.TestCase):
     def setUp(self):
         self.eh = error_handler.ErrorHandler()
+
 
     def test_exchange(self):
         self.assertTrue(self.eh.valid_currency('USD'), "Should be True")

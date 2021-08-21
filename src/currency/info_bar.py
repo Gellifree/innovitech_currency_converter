@@ -1,4 +1,4 @@
-from language_handler import LanguageHandler
+from currency.language_handler import LanguageHandler
 
 class InfoBar:
     l = LanguageHandler.reimport_language()

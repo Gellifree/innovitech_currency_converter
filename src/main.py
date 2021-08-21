@@ -6,13 +6,13 @@
 
 import os
 import sys
-import settings as s
-from menu import MenuDrawer
-from functions import Functions
-from api_handler import ApiHandler
-from language_handler import LanguageHandler
-from settings_handler import SettingsHandler
 
+from currency import settings as s
+from currency.menu import MenuDrawer
+from currency.functions import Functions
+from currency.api_handler import ApiHandler
+from currency.language_handler import LanguageHandler
+from currency.settings_handler import SettingsHandler
 
 def main():
 	ApiHandler.refresh_data()

@@ -1,5 +1,5 @@
-import settings as s
-from language_handler import LanguageHandler
+from . import settings as s
+from currency.language_handler import LanguageHandler
 
 
 # Menü kirajzolását megvalósító osztály

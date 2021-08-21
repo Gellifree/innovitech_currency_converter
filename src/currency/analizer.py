@@ -1,4 +1,4 @@
-from file_handler import FileHandler
+from currency.file_handler import FileHandler
 
 class Analizer:
 
