@@ -11,10 +11,12 @@ from menu import MenuDrawer
 from functions import Functions
 from api_handler import ApiHandler
 from language_handler import LanguageHandler
+from settings_handler import SettingsHandler
 
 
 def main():
 	ApiHandler.refresh_data()
+	SettingsHandler.apply_settings()
 	l = LanguageHandler.reimport_language()
 	answer = 0
 	while(answer != -1):
@@ -43,6 +45,7 @@ def main():
 			func_list[answer]()
 			input(l.lang["done"])
 		else:
+			SettingsHandler.save_settings()
 			input(l.lang["quitting"])
 			os.system("clear")
 

@@ -7,6 +7,7 @@ from menu import MenuDrawer
 from language_handler import LanguageHandler
 from info_bar import InfoBar
 from analizer import Analizer
+from settings_handler import SettingsHandler
 
 # A menühöz tartozó funkciók
 class Functions:
@@ -175,8 +176,10 @@ class Functions:
 
 		if(answer == 0):
 			s.settings["language"] = "hungarian"
+			SettingsHandler.add_setting('language', 'hungarian')
 		elif(answer == 1):
 			s.settings["language"] = "english"
+			SettingsHandler.add_setting('language', 'english')
 
 
 	@staticmethod
@@ -192,8 +195,10 @@ class Functions:
 
 		if(answer == 0):
 			s.settings['last_or_most'] = "mostly_used"
+			SettingsHandler.add_setting('last_or_most', 'mostly_used')
 		elif(answer == 1):
 			s.settings['last_or_most'] = "recently_used"
+			SettingsHandler.add_setting('last_or_most', 'recently_used')
 
 	@staticmethod
 	def settings():
