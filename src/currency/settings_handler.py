@@ -1,4 +1,4 @@
-import settings as s
+from currency import settings as s
 import csv
 
 class SettingsHandler:
@@ -37,7 +37,7 @@ class SettingsHandler:
     @staticmethod
     def save_settings():
         SettingsHandler.check_settings()
-        csv_path = "data/settings.csv"
+        csv_path = "currency/data/settings.csv"
         with open(csv_path, 'w') as settings:
             writer = csv.writer(settings, delimiter=';')
             for setting in SettingsHandler.settings:
@@ -45,7 +45,7 @@ class SettingsHandler:
 
     @staticmethod
     def load_settings():
-        csv_path = "data/settings.csv"
+        csv_path = "currency/data/settings.csv"
         with open(csv_path) as settings:
             reader = csv.reader(settings)
             data_list = []

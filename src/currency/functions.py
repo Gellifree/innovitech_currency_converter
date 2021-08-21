@@ -1,13 +1,15 @@
-import settings as s
-from file_handler import FileHandler
-from error_handler import ErrorHandler
-from api_handler import ApiHandler
-from converter import Converter
-from menu import MenuDrawer
-from language_handler import LanguageHandler
-from info_bar import InfoBar
-from analizer import Analizer
-from settings_handler import SettingsHandler
+
+from currency.file_handler import FileHandler
+from currency.error_handler import ErrorHandler
+from currency.converter import Converter
+from currency.info_bar import InfoBar
+from currency.analizer import Analizer
+from currency import settings as s
+from currency.menu import MenuDrawer
+from currency.api_handler import ApiHandler
+from currency.language_handler import LanguageHandler
+from currency.settings_handler import SettingsHandler
+
 
 # A menühöz tartozó funkciók
 class Functions:

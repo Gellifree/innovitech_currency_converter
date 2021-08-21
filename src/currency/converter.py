@@ -1,12 +1,12 @@
 class Converter:
     @staticmethod
     def convert_from_eur(value, target):
-        from file_handler import FileHandler
+        from currency.file_handler import FileHandler
         return value * FileHandler.read_exchange()['rates'][target]
 
     @staticmethod
     def convert_to_eur(value, base):
-        from file_handler import FileHandler
+        from currency.file_handler import FileHandler
         return value / FileHandler.read_exchange()['rates'][base]
 
     @staticmethod

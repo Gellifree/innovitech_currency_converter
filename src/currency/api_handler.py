@@ -1,9 +1,9 @@
 import requests
 import os
-from  file_handler import FileHandler
 from datetime import date
-import settings as s
-from language_handler import LanguageHandler
+from currency.file_handler import FileHandler
+from currency.language_handler import LanguageHandler
+from currency import settings as s
 
 
 class ApiHandler:

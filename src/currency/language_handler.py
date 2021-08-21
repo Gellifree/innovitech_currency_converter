@@ -1,5 +1,5 @@
 import importlib
-import settings as s
+from currency import settings as s
 
 class LanguageHandler:
     l = ""
@@ -8,10 +8,10 @@ class LanguageHandler:
     def reimport_language():
         importlib.invalidate_caches()
         if(s.settings["language"] == "hungarian"):
-            LanguageHandler.l = importlib.import_module("languages.hungarian")
+            LanguageHandler.l = importlib.import_module("currency.languages.hungarian")
         elif(s.settings["language"] == "english"):
-            LanguageHandler.l = importlib.import_module("languages.english")
+            LanguageHandler.l = importlib.import_module("currency.languages.english")
         else:
             # nem értelmezhető nyelvi beállítás
-            LanguageHandler.l = importlib.import_module("languages.hungarian")
+            LanguageHandler.l = importlib.import_module("currency.languages.hungarian")
         return LanguageHandler.l
