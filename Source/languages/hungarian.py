@@ -74,3 +74,5 @@ lang["result_list"]             = "Eredmények listázása átváltásnál"
 lang["list_last_or_most"]       = "Leggyakrabban/utoljára használt valuták listázása"
 
 lang["watch_settings"]          = "Beállítások megtekintése"
+
+lang["function_turned_off"]     = ">>>> Figyelem: Ez a funkció jelenleg ki van kapcsolva! <<<<\n"

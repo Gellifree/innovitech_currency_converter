@@ -75,3 +75,5 @@ lang["result_list"]             = "List result list when converting"
 lang["list_last_or_most"]       = "List recently/mostly used currencies"
 
 lang["watch_settings"]          = "Watch settings"
+
+lang["function_turned_off"]     = ">>>> Attention: This function is turned off at the moment! <<<<\n"

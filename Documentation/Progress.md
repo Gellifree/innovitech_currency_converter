@@ -32,7 +32,26 @@ A program bővítésre került a Funkció modulból az egyszerű átváltással 
  - [X] NY1 - Futási időben cserélhető nyelv, viszont nem menti le az ujraindulás után alaphelyeztbe áll
  - [X] F5 - Optimalizált API hívás megvalósítva
  - [X] F4 - Nem csak az utoljára, hanem a leggyakrabban használt, maximum 5 valutát is választhatjuk a beállításokban
- - [ ] K1 - Az automatikus felismerés kapcsán, sok meglévő függvényt kell újragondolni
- - [ ] K2 - A beállítások szerint alapesetben megjeleníthetőek lehetnek az értékek, de ne vegyük el a felhasználótól a lehetőséget, hogy maga adjon meg egy valuta típust.
- - [ ] K3 - Kiinduló és cél valuták megvalósításának prioritása csökkent
- - [ ] K4 - Kényelmi funkciók megvalósítását követi
+
+ **2021.08.20**
+
+ Megvalósíŧásra került az automatikus felismerés, a beállítások lementése, és visszatöltése, funkciók ki és bekapcsolásának lehetősége. Ezenkívül újragondolásra kerültek a listázási nézetek, hogy üres táblázat esetén, ne jelenítsük meg a fejlécet. Az átváltásoknál lehetőségünk van bekapcsolni, hogy eredményként megjelenítse a legtöbbet/legutoljára használt cél valutákban, és hogy ezenkívül megadjunk egy valutát.
+
+ - [X] K1 - Az automatikus felismerés működik, végül nem lett kikapcsolható, mert nem vagyunk kénytelenek megadni a valutát használat közben
+ - [X] K2 - Megjelenik a lista, amennyiben beállítottuk hogy legyek aktív a funkció. Módosíthatjuk hogy a legutoljára használt 5, vagy a leggyakrabban használt 5 valutába váltson át automatikusan.
+ - [X] K4 - A beállítások menüben kikapcsolható két kényelmi funkció
+ - [ ] K3 - Nem kerül megvalósításra, a többi funkció mellett felesleges
+
+Ezzel az eredetileg elkészített követelménylista teljesítésre került.
+
+**Pár plusz kényelmi funkció, ami nem volt benne a követelménylistában:**
+
+ - Amennyiben átakarjuk állítani, hogy a legutoljára, vagy legtöbbet használt valutákat használja a program, de a funkció ki van kapcsolva, felhívja rá a figyelmünket.
+ - Az adatok naprakészségét jelzi a program
+ - A szűréseknél amikor a régi átváltásokban keresünk, megjelenítjük az eredmények darab számát
+ - A beállítások gyors áttekintése érdekében azok kilistázhatóak
+ - Az előzmények törölhetőek
+ - Amennyiben bekapcsoltuk hogy jelenítse meg a legutojára/legtöbbet használt valutákat, de nincs rendelkezésre álló adat, a program jelzi a felhasználónak.
+ - Minden kilépésnél elmentjük a program futása közben történt beállítás változásokat, hogy azokat visszatölthessük újraindulás után.
+
+ 

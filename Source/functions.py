@@ -245,8 +245,13 @@ class Functions:
 	def set_currency_bar():
 		set_currency_menu = [Functions.l.lang["mostly_used"][:-2], Functions.l.lang["recently_used"][:-2]]
 
+		if(s.settings["show_last_or_most"] == 'off'):
+			print(Functions.l.lang["function_turned_off"])
+
 		print(Functions.l.lang["currency_bar_status"] + Functions.l.lang[s.settings['last_or_most']][:-2] + "\n")
+
 		answer = MenuDrawer.draw(set_currency_menu)
+
 
 		if(answer == 0):
 			s.settings['last_or_most'] = "mostly_used"
