@@ -48,7 +48,8 @@ lang["status_up_to_date"]       = "az adatok naprakészek"
 lang["status_old"]              = "az adatok nem naprakészek!"
 
 lang["settings_change_lang"]    = "Nyelv megváltoztatása"
-lang["settings_recognise"]      = "Automatikus felismerés"
+lang["currency_bar"]            = "Valuta sáv beállításai"
+lang["settings_func_on_off"]    = "Funkciók ki/be kapcsolása"
 
 lang["hungarian"]               = "Magyar"
 lang["english"]                 = "Angol"
@@ -59,11 +60,17 @@ lang["mostly_used"]             = "Legtöbbet használt valuták: "
 lang["recently_used"]           = "Legutoljára használt valuták: "
 lang["no_recent_found"]         = "\n  >> Nem találhatóak korábbi átváltások. <<"
 
-lang["currency_bar"]            = "Valuta sáv beállításai"
-
 lang["currency_bar_status"]     = "    Jelenleg aktív: "
 
 lang["clear_history"]           = "Előzmények törlése"
 lang["cleared_history"]         = "  >> Előzmények törölve <<"
 lang["cancelled"]               = "  >> Akció visszavonva <<"
 lang["delete_confirmation"]     = "  >> Biztos benne hogy törli az előzményeket? [I/n] <<"
+
+lang["on"]                      = "Be"
+lang["off"]                     = "Ki"
+
+lang["result_list"]             = "Eredmények listázása átváltásnál"
+lang["list_last_or_most"]       = "Leggyakrabban/utoljára használt valuták listázása"
+
+lang["watch_settings"]          = "Beállítások megtekintése"

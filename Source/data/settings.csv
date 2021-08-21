@@ -1,3 +1,5 @@
 name;value
+list_multiple;off
+show_last_or_most;on
 language;hungarian
 last_or_most;recently_used

@@ -40,12 +40,13 @@ class Functions:
 
 
 		if(result[1] == "unknown"):
-			if(s.settings["last_or_most"] == "mostly_used"):
-				base_list = Analizer.calculate_mostly_used()[0]
-				InfoBar.draw_mostly_used(base_list)
-			else:
-				base_list = Analizer.calculate_last_five()[0]
-				InfoBar.draw_recent(base_list)
+			if(s.settings["show_last_or_most"] == 'on'):
+				if(s.settings["last_or_most"] == "mostly_used"):
+					base_list = Analizer.calculate_mostly_used()[0]
+					InfoBar.draw_mostly_used(base_list)
+				else:
+					base_list = Analizer.calculate_last_five()[0]
+					InfoBar.draw_recent(base_list)
 
 			while(ErrorHandler.valid_currency(base) == False):
 				print(Functions.l.lang["base"])
@@ -58,15 +59,17 @@ class Functions:
 
 		target = "unknown"
 
-		if(s.settings["last_or_most"] == "mostly_used"):
-			target_list = Analizer.calculate_mostly_used()[1]
-			InfoBar.draw_mostly_used(target_list)
-		else:
-			target_list = Analizer.calculate_last_five()[1]
-			InfoBar.draw_recent(target_list)
+		if(s.settings["show_last_or_most"] == 'on'):
+			if(s.settings["last_or_most"] == "mostly_used"):
+				target_list = Analizer.calculate_mostly_used()[1]
+				InfoBar.draw_mostly_used(target_list)
+			else:
+				target_list = Analizer.calculate_last_five()[1]
+				InfoBar.draw_recent(target_list)
 
-		convert_results = Converter.convert_from_list(base, target_list, value)
-		InfoBar.draw_results(convert_results)
+		if(s.settings["list_multiple"] == 'on'):
+			convert_results = Converter.convert_from_list(base, target_list, value)
+			InfoBar.draw_results(convert_results)
 
 		while(ErrorHandler.valid_currency(target) == False):
 			print(Functions.l.lang["target"])
@@ -211,8 +214,32 @@ class Functions:
 
 
 	@staticmethod
-	def recognise():
-		print("recognise option")
+	def function_on_off():
+		turn_on_off_menu = [Functions.l.lang["result_list"], Functions.l.lang["list_last_or_most"]]
+		answer = MenuDrawer.draw(turn_on_off_menu)
+		on_off_menu = [Functions.l.lang["on"], Functions.l.lang["off"]]
+		print()
+
+		if(answer == 0):
+			print("   Jelenlegi állapot: " + Functions.l.lang[s.settings['list_multiple']] + "\n")
+
+			sub_answer = MenuDrawer.draw(on_off_menu)
+			if(sub_answer == 0):
+				SettingsHandler.add_setting('list_multiple', 'on')
+			elif(sub_answer == 1):
+				SettingsHandler.add_setting('list_multiple', 'off')
+		if(answer == 1):
+			print("   Jelenlegi állapot: " + Functions.l.lang[s.settings['show_last_or_most']] + "\n")
+
+			sub_answer = MenuDrawer.draw(on_off_menu)
+			if(sub_answer == 0):
+				SettingsHandler.add_setting('show_last_or_most', 'on')
+			elif(sub_answer == 1):
+				SettingsHandler.add_setting('show_last_or_most', 'off')
+		SettingsHandler.save_settings()
+		SettingsHandler.apply_settings()
+
+
 
 	@staticmethod
 	def set_currency_bar():
@@ -238,11 +265,17 @@ class Functions:
 		else:
 			print(Functions.l.lang["cancelled"])
 
+	@staticmethod
+	def watch_settings():
+		for setting in s.settings:
+			print("  " + setting + ":   \t" + s.settings[setting])
+		print()
+
 
 	@staticmethod
 	def settings():
-		settings_menu = [Functions.l.lang["settings_change_lang"], Functions.l.lang["settings_recognise"], Functions.l.lang["currency_bar"], Functions.l.lang["clear_history"]]
-		settings_menu_func_list = [Functions.change_lang, Functions.recognise, Functions.set_currency_bar, Functions.clear_history]
+		settings_menu = [Functions.l.lang["settings_change_lang"], Functions.l.lang["settings_func_on_off"], Functions.l.lang["currency_bar"], Functions.l.lang["clear_history"], Functions.l.lang["watch_settings"]]
+		settings_menu_func_list = [Functions.change_lang, Functions.function_on_off, Functions.set_currency_bar, Functions.clear_history, Functions.watch_settings]
 
 		answer = MenuDrawer.draw(settings_menu)
 

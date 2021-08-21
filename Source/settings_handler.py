@@ -13,10 +13,10 @@ class SettingsHandler:
 
     @staticmethod
     def apply_settings():
-    	x = SettingsHandler.load_settings()
-    	for data in x:
-    		if(data[0] in s.settings):
-    			s.settings[data[0]] = data[1]
+        x = SettingsHandler.load_settings()
+        for data in x:
+            if(data[0] in s.settings):
+                s.settings[data[0]] = data[1]
 
     @staticmethod
     def check_settings():

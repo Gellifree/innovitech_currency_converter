@@ -49,7 +49,8 @@ lang["status_up_to_date"]       = "data is up to date"
 lang["status_old"]              = "data is not up to date!"
 
 lang["settings_change_lang"]    = "Change language"
-lang["settings_recognise"]      = "Automatic recognise"
+lang["currency_bar"]            = "Currency bar settings"
+lang["settings_func_on_off"]    = "Turn functions on/off"
 
 lang["hungarian"]               = "Hungarian"
 lang["english"]                 = "English"
@@ -60,11 +61,17 @@ lang["mostly_used"]             = "Mostly used currencies: "
 lang["recently_used"]           = "Recently used currencies: "
 lang["no_recent_found"]         = "\n  >> No exchange history was found. <<"
 
-lang["currency_bar"]            = "Currency bar settings"
-
 lang["currency_bar_status"]     = "    Currently on: "
 
 lang["clear_history"]           = "Clear history"
 lang["cleared_history"]         = "  >> History cleared <<"
 lang["cancelled"]               = "  >> Action cancelled <<"
 lang["delete_confirmation"]     = "  >> Are you sure your want to delete your history? [Y/n] <<"
+
+lang["on"]                      = "On"
+lang["off"]                     = "Off"
+
+lang["result_list"]             = "List result list when converting"
+lang["list_last_or_most"]       = "List recently/mostly used currencies"
+
+lang["watch_settings"]          = "Watch settings"
