@@ -31,7 +31,8 @@ lang["item_counter"]            = " elem lett megtalálva."
 lang["all_item"]                = " darab összesen."
 
 lang["not_a_number"]            = "  >>> A beírt adat nem konvertálható számmá! <<<"
-lang["not_a_currency"]          = "  >>> A beírt valuta nem található! <<<"
+lang["not_a_currency"]          = "  >>> A beírt valuta nem létezik! <<<"
+lang["not_a_date"]              = "  >>> A beírt dátum nem felismerhető! <<<"
 
 lang["result"]                  = "\n  Az eredmény: "
 lang["check_currency_list"]     = "  >>> Ellenőrizd az\033[1m Összes valuta listázása\033[0m menüpontot! <<<"
@@ -60,3 +61,8 @@ lang["no_recent_found"]         = "\n  >> Nem találhatóak korábbi átváltás
 lang["currency_bar"]            = "Valuta sáv beállításai"
 
 lang["currency_bar_status"]     = "    Jelenleg aktív: "
+
+lang["clear_history"]           = "Előzmények törlése"
+lang["cleared_history"]         = "  >> Előzmények törölve <<"
+lang["cancelled"]               = "  >> Akció visszavonva <<"
+lang["delete_confirmation"]     = "  >> Biztos benne hogy törli az előzményeket? [I/n] <<"

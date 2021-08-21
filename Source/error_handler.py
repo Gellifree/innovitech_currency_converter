@@ -19,5 +19,12 @@ class ErrorHandler:
 
     @staticmethod
     def valid_date(date):
-        # implement later
-        return False
+        if(len(date) < 10):
+            return False
+        if(date[4] != '-' or date[7] != '-'):
+            return False
+        return True
+
+
+if __name__ == '__main__':
+    ErrorHandler.valid_date("2021-02-12")

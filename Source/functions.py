@@ -170,12 +170,22 @@ class Functions:
 				sub_menu_func_list[answer]()
 			if(answer == 1):
 				print(Functions.l.lang["ask_date"])
-				date = input("  >> ")
+				date = "unknown"
+				while(ErrorHandler.valid_date(date) == False):
+					date = input("  >> ")
+					if(ErrorHandler.valid_date(date) == False):
+						print(Functions.l.lang["not_a_date"])
 				sub_menu_func_list[answer](date)
 			if(answer == 2):
 				print(Functions.l.lang["ask_currency"])
-				currency = input("  >> ").upper()
+				currency = "unkown"
+				while(ErrorHandler.valid_currency(currency) == False):
+					currency = input("  >> ").upper()
+					if(ErrorHandler.valid_currency(currency) == False):
+						print(Functions.l.lang["not_a_currency"])
+						print(Functions.l.lang["check_currency_list"])
 				sub_menu_func_list[answer](currency)
+
 
 	@staticmethod
 	def list():
@@ -224,9 +234,20 @@ class Functions:
 			SettingsHandler.add_setting('last_or_most', 'recently_used')
 
 	@staticmethod
+	def clear_history():
+		print(Functions.l.lang["delete_confirmation"])
+		answer = input("  >> ")
+		if(answer == "Y" or answer == "y" or answer == "I" or answer == "i"):
+			FileHandler.delete_history()
+			print(Functions.l.lang["cleared_history"])
+		else:
+			print(Functions.l.lang["cancelled"])
+
+
+	@staticmethod
 	def settings():
-		settings_menu = [Functions.l.lang["settings_change_lang"], Functions.l.lang["settings_recognise"], Functions.l.lang["currency_bar"]]
-		settings_menu_func_list = [Functions.change_lang, Functions.recognise, Functions.set_currency_bar]
+		settings_menu = [Functions.l.lang["settings_change_lang"], Functions.l.lang["settings_recognise"], Functions.l.lang["currency_bar"], Functions.l.lang["clear_history"]]
+		settings_menu_func_list = [Functions.change_lang, Functions.recognise, Functions.set_currency_bar, Functions.clear_history]
 
 		answer = MenuDrawer.draw(settings_menu)
 

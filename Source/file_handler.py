@@ -23,6 +23,13 @@ class FileHandler:
         f.close()
 
     @staticmethod
+    def delete_history():
+        csv_path = "data/saved_conversions.csv"
+        with open(csv_path, 'w') as saved_conversions:
+            writer = csv.writer(saved_conversions, delimiter=";")
+            writer.writerow(['date','base','target','value','result'])
+
+    @staticmethod
     def read_saved_conversions():
         csv_path = "data/saved_conversions.csv"
         with open(csv_path) as saved_conversions:

@@ -32,6 +32,7 @@ lang["all_item"]                = " pieces in total."
 
 lang["not_a_number"]            = "  >>> The entered data cannot be converted into a number! <<<"
 lang["not_a_currency"]          = "  >>> I can't find the currency you typed! <<<"
+lang["not_a_date"]              = "  >>> The typed dated can not be recognised! <<<"
 
 lang["result"]                  = "\n  The result: "
 lang["check_currency_list"]     = "  >>> Check the\033[1m List all currency\033[0m menupoint! <<<"
@@ -60,3 +61,8 @@ lang["no_recent_found"]         = "\n  >> No exchange history was found. <<"
 lang["currency_bar"]            = "Currency bar settings"
 
 lang["currency_bar_status"]     = "    Currently on: "
+
+lang["clear_history"]           = "Clear history"
+lang["cleared_history"]         = "  >> History cleared <<"
+lang["cancelled"]               = "  >> Action cancelled <<"
+lang["delete_confirmation"]     = "  >> Are you sure your want to delete your history? [Y/n] <<"
