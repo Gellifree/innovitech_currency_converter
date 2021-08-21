@@ -21,6 +21,9 @@ class Functions:
 	@staticmethod
 	def exchange():
 		value = "unknown"
+		base_list = []
+		target_list = []
+
 		while(ErrorHandler.valid_number(value) == False):
 			print(Functions.l.lang["value"])
 			value = input("  >> ")
@@ -52,11 +55,14 @@ class Functions:
 		target = "unknown"
 
 		if(s.settings["last_or_most"] == "mostly_used"):
-			base_list = Analizer.calculate_mostly_used()[1]
-			InfoBar.draw_mostly_used(base_list)
+			target_list = Analizer.calculate_mostly_used()[1]
+			InfoBar.draw_mostly_used(target_list)
 		else:
-			base_list = Analizer.calculate_last_five()[1]
-			InfoBar.draw_recent(base_list)
+			target_list = Analizer.calculate_last_five()[1]
+			InfoBar.draw_recent(target_list)
+
+		convert_results = Converter.convert_from_list(base, target_list, value)
+		InfoBar.draw_results(convert_results)
 
 		while(ErrorHandler.valid_currency(target) == False):
 			print(Functions.l.lang["target"])
@@ -72,7 +78,7 @@ class Functions:
 
 
 	@staticmethod
-	def print_header_in_string():
+	def print_header():
 		result = "\n"
 		data_set = FileHandler.read_saved_conversions()
 
@@ -81,33 +87,18 @@ class Functions:
 				result += "  " + header_title + "\t\t"
 			elif(header_title == 'result'):
 				result += header_title + "\t\n"
-				result+= "  ------------------------------------------------------------"
+				result+= "  -------------------------------------------------"
 			else:
 				result += header_title + "\t"
 		result += "\n"
 		return result
-
-	@staticmethod
-	def print_header():
-		print()
-		data_set = FileHandler.read_saved_conversions()
-
-		for header_title in next(data_set):
-			if(header_title == 'date'):
-				print("  " + header_title + "\t\t", end="")
-			elif(header_title == 'result'):
-				print(header_title + "\t", end="\n")
-				print("  ------------------------------------------------------------", end="")
-			else:
-				print(header_title + "\t", end="")
-		print()
 
 
 	@staticmethod
 	def view_all():
 		counter = 0
 		data_set = FileHandler.read_saved_conversions()
-		header = Functions.print_header_in_string()
+		header = Functions.print_header()
 		next(data_set)
 		buffer = ""
 		for data in data_set:
@@ -126,7 +117,7 @@ class Functions:
 	def view_by_date(date):
 		counter = 0
 		data_set = FileHandler.read_saved_conversions()
-		header = Functions.print_header_in_string()
+		header = Functions.print_header()
 		buffer = ""
 		for data in data_set:
 			if(data[0] == date):
@@ -143,7 +134,7 @@ class Functions:
 	def view_by_currency(currency):
 		counter = 0
 		data_set = FileHandler.read_saved_conversions()
-		header = Functions.print_header_in_string()
+		header = Functions.print_header()
 		buffer = ""
 		for data in data_set:
 			if(data[1] == currency or data[2] == currency):
@@ -237,7 +228,7 @@ class Functions:
 	def clear_history():
 		print(Functions.l.lang["delete_confirmation"])
 		answer = input("  >> ")
-		if(answer == "Y" or answer == "y" or answer == "I" or answer == "i"):
+		if(answer == "Y" or answer == "y" or answer == "I" or answer == "i" or answer == ""):
 			FileHandler.delete_history()
 			print(Functions.l.lang["cleared_history"])
 		else:

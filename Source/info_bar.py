@@ -26,3 +26,11 @@ class InfoBar:
             for data in data_list:
                 print(" [" + data + "] ", end="")
             print()
+
+    @staticmethod
+    def draw_results(data_list):
+        print()
+        if(len(data_list) > 0):
+            for data in data_list:
+                print(data, end="")
+            print()
