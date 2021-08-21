@@ -61,11 +61,3 @@ class SettingsHandler:
                 data = ''
                 yield data_list
                 data_list = []
-
-if __name__ == '__main__':
-    if False:
-        print(SettingsHandler.settings)
-        SettingsHandler.add_setting('language', 'hungarian')
-        print(SettingsHandler.settings)
-        SettingsHandler.save_settings()
-    SettingsHandler.check_settings()

@@ -20,13 +20,10 @@ def main():
 	l = LanguageHandler.reimport_language()
 	answer = 0
 	while(answer != -1):
-
 		MenuDrawer.update_language()
 		Functions.update_language()
 		ApiHandler.update_language()
 		l = LanguageHandler.reimport_language()
-
-
 
 		main_menu = (l.lang["menu_item_exchange"], l.lang["menu_item_list_currency"] ,l.lang["menu_item_view"], l.lang["menu_item_settings"], l.lang["menu_item_help"], l.lang["menu_item_quit"])
 		func_list = [Functions.exchange, Functions.list, Functions.view, Functions.settings, Functions.help]

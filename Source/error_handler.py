@@ -63,7 +63,3 @@ class ErrorHandler:
         if(data[0] == "not_valid" or data[1] == "not_valid"):
             return False
         return True
-
-
-if __name__ == '__main__':
-    ErrorHandler.valid_date("2021-02-12")

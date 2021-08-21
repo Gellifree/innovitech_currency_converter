@@ -70,7 +70,3 @@ class Analizer:
                 if d[1] not in result[1]:
                     result[1].append(d[1])
         return result
-
-
-if __name__ == '__main__':
-    print(Analizer.calculate_last_five())

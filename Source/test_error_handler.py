@@ -12,6 +12,7 @@ class TestErrorHandler(unittest.TestCase):
         self.assertFalse(self.eh.valid_currency('huf'), "Should be False")
 
     def test_valid_date(self):
+        # Bővíteni kéne (2020-99-99, False)
         self.assertTrue(self.eh.valid_date('2021-08-20'), "Should be True")
         self.assertFalse(self.eh.valid_date('2021.08.20'), "Should be False")
         self.assertFalse(self.eh.valid_date('2021-08'), "Should be False")

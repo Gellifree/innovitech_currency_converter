@@ -293,7 +293,3 @@ class Functions:
 	@staticmethod
 	def help():
 		print("fourth function")
-
-
-if __name__ == '__main__':
-	print(Functions.recognise_currency('1021331.313 huf'))
