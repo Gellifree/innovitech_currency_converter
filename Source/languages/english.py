@@ -33,6 +33,8 @@ lang["all_item"]                = " pieces in total."
 lang["not_a_number"]            = "  >>> The entered data cannot be converted into a number! <<<"
 lang["not_a_currency"]          = "  >>> I can't find the currency you typed! <<<"
 lang["not_a_date"]              = "  >>> The typed dated can not be recognised! <<<"
+lang["bad_input"]               = "  >>> I cannot process the information! <<<\n"
+
 
 lang["result"]                  = "\n  The result: "
 lang["check_currency_list"]     = "  >>> Check the\033[1m List all currency\033[0m menupoint! <<<"

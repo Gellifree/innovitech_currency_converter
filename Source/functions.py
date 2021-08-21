@@ -21,36 +21,40 @@ class Functions:
 	@staticmethod
 	def exchange():
 		value = "unknown"
+		result = []
 		base_list = []
 		target_list = []
 
-		while(ErrorHandler.valid_number(value) == False):
+		while(ErrorHandler.valid_number_with_currency(value) == False):
 			print(Functions.l.lang["value"])
 			value = input("  >> ")
 
-			if(ErrorHandler.valid_number(value)):
-				value = float(value)
+			if(ErrorHandler.valid_number_with_currency(value)):
+				result = ErrorHandler.recognise_currency(value)
+				value = float(ErrorHandler.recognise_currency(value)[0])
 			else:
-				print(Functions.l.lang["not_a_number"])
+				print(Functions.l.lang["bad_input"])
 
 
 		base = "unknown"
 
 
-		if(s.settings["last_or_most"] == "mostly_used"):
-			base_list = Analizer.calculate_mostly_used()[0]
-			InfoBar.draw_mostly_used(base_list)
+		if(result[1] == "unknown"):
+			if(s.settings["last_or_most"] == "mostly_used"):
+				base_list = Analizer.calculate_mostly_used()[0]
+				InfoBar.draw_mostly_used(base_list)
+			else:
+				base_list = Analizer.calculate_last_five()[0]
+				InfoBar.draw_recent(base_list)
+
+			while(ErrorHandler.valid_currency(base) == False):
+				print(Functions.l.lang["base"])
+				base = input("  >> ").upper()
+				if(ErrorHandler.valid_currency(base) == False):
+					print(Functions.l.lang["not_a_currency"])
+					print(Functions.l.lang["check_currency_list"])
 		else:
-			base_list = Analizer.calculate_last_five()[0]
-			InfoBar.draw_recent(base_list)
-
-		while(ErrorHandler.valid_currency(base) == False):
-			print(Functions.l.lang["base"])
-			base = input("  >> ").upper()
-			if(ErrorHandler.valid_currency(base) == False):
-				print(Functions.l.lang["not_a_currency"])
-				print(Functions.l.lang["check_currency_list"])
-
+			base = result[1]
 
 		target = "unknown"
 
@@ -254,4 +258,4 @@ class Functions:
 
 
 if __name__ == '__main__':
-	Functions.view_all_with_buffer()
+	print(Functions.recognise_currency('1021331.313 huf'))

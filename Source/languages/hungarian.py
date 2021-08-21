@@ -33,6 +33,7 @@ lang["all_item"]                = " darab összesen."
 lang["not_a_number"]            = "  >>> A beírt adat nem konvertálható számmá! <<<"
 lang["not_a_currency"]          = "  >>> A beírt valuta nem létezik! <<<"
 lang["not_a_date"]              = "  >>> A beírt dátum nem felismerhető! <<<"
+lang["bad_input"]               = "  >>> A beírt adatot nem tudom feldolgozni! <<<\n"
 
 lang["result"]                  = "\n  Az eredmény: "
 lang["check_currency_list"]     = "  >>> Ellenőrizd az\033[1m Összes valuta listázása\033[0m menüpontot! <<<"
