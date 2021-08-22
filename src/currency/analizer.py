@@ -45,7 +45,6 @@ class Analizer:
             if(len(data_set[data]) <= 5):
                 currency_list.append(currency_names)
             else:
-                # NEM a legújabb öt, hanem a leggyakrabban használt 5!
                 result = []
                 for i in range(5):
                     result.append(currency_names[i])

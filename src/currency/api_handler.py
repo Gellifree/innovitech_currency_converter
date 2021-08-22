@@ -33,12 +33,12 @@ class ApiHandler:
 		response = requests.request("GET", url)
 		if(response.ok):
 			print(ApiHandler.l.lang["update_succes"])
-			f = open("data/exchange_rates.json", "w")
+			f = open("currency/data/exchange_rates.json", "w")
 			f.write(response.text)
 			f.close()
 			ApiHandler.status = ApiHandler.l.lang["status_up_to_date"]
 		else:
-			f = open("data/error_log", "a")
+			f = open("currency/data/error_log", "a")
 			f.write("  >>> Error while updating <<<\n")
 			f.write("  Code:" + str(response.status_code) + "\n")
 			f.close()
@@ -58,6 +58,6 @@ if(False):
     response = requests.request("GET", url)
     print(response.text)
 
-    f = open("data/symbols.json", "w")
+    f = open("currency/data/symbols.json", "w")
     f.write(response.text)
     f.close()

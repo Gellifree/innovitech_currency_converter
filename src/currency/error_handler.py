@@ -23,6 +23,11 @@ class ErrorHandler:
             return False
         if(date[4] != '-' or date[7] != '-'):
             return False
+        if(int(date[5] + date[6]) > 12):
+            return False
+        # Nem tökéletes, ha pontosabban akarnánk, konkrétan kéne nézni a hónapot, hogy hány napos
+        if(int(date[8] + date[9]) > 31):
+            return False
         return True
 
 
