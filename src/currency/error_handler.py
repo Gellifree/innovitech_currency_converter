@@ -30,7 +30,6 @@ class ErrorHandler:
             return False
         return True
 
-
     @staticmethod
     def slice_input(input):
         result = []

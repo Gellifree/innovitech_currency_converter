@@ -10,7 +10,6 @@ from currency.api_handler import ApiHandler
 from currency.language_handler import LanguageHandler
 from currency.settings_handler import SettingsHandler
 
-
 # A menühöz tartozó funkciók
 class Functions:
 	l = LanguageHandler.reimport_language()
@@ -37,9 +36,7 @@ class Functions:
 			else:
 				print(Functions.l.lang["bad_input"])
 
-
 		base = "unknown"
-
 
 		if(result[1] == "unknown"):
 			if(s.settings["show_last_or_most"] == 'on'):
@@ -80,11 +77,9 @@ class Functions:
 				print(Functions.l.lang["not_a_currency"])
 				print(Functions.l.lang["check_currency_list"])
 
-
 		FileHandler.save_exchange(base, target, value)
 
 		print(Functions.l.lang["result"], Converter.convert(base, target, value))
-
 
 	@staticmethod
 	def print_header():
@@ -101,7 +96,6 @@ class Functions:
 				result += header_title + "\t"
 		result += "\n"
 		return result
-
 
 	@staticmethod
 	def view_all():
@@ -120,7 +114,6 @@ class Functions:
 			print(Functions.l.lang["table_title"])
 			print(header + buffer)
 		print("  " + str(counter) + Functions.l.lang["all_item"])
-
 
 	@staticmethod
 	def view_by_date(date):
@@ -186,7 +179,6 @@ class Functions:
 						print(Functions.l.lang["check_currency_list"])
 				sub_menu_func_list[answer](currency)
 
-
 	@staticmethod
 	def list():
 		data_set = FileHandler.read_symbols()['symbols']
@@ -214,7 +206,6 @@ class Functions:
 			s.settings["language"] = "english"
 			SettingsHandler.add_setting('language', 'english')
 
-
 	@staticmethod
 	def function_on_off():
 		turn_on_off_menu = [Functions.l.lang["result_list"], Functions.l.lang["list_last_or_most"]]
@@ -241,8 +232,6 @@ class Functions:
 		SettingsHandler.save_settings()
 		SettingsHandler.apply_settings()
 
-
-
 	@staticmethod
 	def set_currency_bar():
 		set_currency_menu = [Functions.l.lang["mostly_used"][:-2], Functions.l.lang["recently_used"][:-2]]
@@ -253,7 +242,6 @@ class Functions:
 		print(Functions.l.lang["currency_bar_status"] + Functions.l.lang[s.settings['last_or_most']][:-2] + "\n")
 
 		answer = MenuDrawer.draw(set_currency_menu)
-
 
 		if(answer == 0):
 			s.settings['last_or_most'] = "mostly_used"
@@ -278,11 +266,13 @@ class Functions:
 			print("  " + setting + ":   \t" + s.settings[setting])
 		print()
 
+	def update_symbols():
+		ApiHandler.request_api_symbols()
 
 	@staticmethod
 	def settings():
-		settings_menu = [Functions.l.lang["settings_change_lang"], Functions.l.lang["settings_func_on_off"], Functions.l.lang["currency_bar"], Functions.l.lang["clear_history"], Functions.l.lang["watch_settings"]]
-		settings_menu_func_list = [Functions.change_lang, Functions.function_on_off, Functions.set_currency_bar, Functions.clear_history, Functions.watch_settings]
+		settings_menu = [Functions.l.lang["settings_change_lang"], Functions.l.lang["settings_func_on_off"], Functions.l.lang["currency_bar"], Functions.l.lang["clear_history"],Functions.l.lang["update_symbols"] , Functions.l.lang["watch_settings"]]
+		settings_menu_func_list = [Functions.change_lang, Functions.function_on_off, Functions.set_currency_bar, Functions.clear_history, Functions.update_symbols, Functions.watch_settings]
 
 		answer = MenuDrawer.draw(settings_menu)
 
@@ -291,7 +281,6 @@ class Functions:
 		elif(answer != -1):
 			print(" >> " + settings_menu[answer] + " <<\n")
 			settings_menu_func_list[answer]()
-
 
 	@staticmethod
 	def help():

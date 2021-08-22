@@ -6,7 +6,6 @@ class SettingsHandler:
         'name': 'value'
     }
 
-
     @staticmethod
     def add_setting(name, value):
         SettingsHandler.settings[name] = value
@@ -31,8 +30,6 @@ class SettingsHandler:
         for key in key_list:
             if(key not in SettingsHandler.settings.keys()):
                 SettingsHandler.settings[key] = data_dictionary[key]
-
-
 
     @staticmethod
     def save_settings():

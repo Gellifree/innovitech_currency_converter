@@ -1,7 +1,6 @@
 from currency.file_handler import FileHandler
 
 class Analizer:
-
     @staticmethod
     def generate_data():
         result = []
@@ -14,6 +13,7 @@ class Analizer:
     @staticmethod
     def collect_from_data():
         data_set = Analizer.generate_data()
+        
         result = {
             'base' : {},
             'target' : {}

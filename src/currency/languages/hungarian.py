@@ -78,3 +78,5 @@ lang["watch_settings"]          = "Beállítások megtekintése"
 lang["function_turned_off"]     = ">>>> Figyelem: Ez a funkció jelenleg ki van kapcsolva! <<<<\n"
 
 lang["need_help"]               = "  >> Mivel kapcsolatban van szüksége segítségre? <<\n"
+
+lang["update_symbols"]          = "Valutatípusok erőltetett frissítése"

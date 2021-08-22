@@ -3,7 +3,6 @@ import os
 from datetime import date
 import csv
 
-
 class FileHandler:
     @staticmethod
     def read_exchange():

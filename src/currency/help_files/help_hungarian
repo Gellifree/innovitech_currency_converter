@@ -99,6 +99,9 @@ MENÜ
             - Előzmények törlése
               Lehetőséged van törölni az összes lementett átváltási adatot.
 
+            - Valutatípusok erőltetett frissítése
+              Lehetőséged van frissíteni a valutatípusok json fájlt ha akarod.
+
             - Beállítások megtekintése
               Lehetőséged van megtekinteni az összes beállítás értékét.
 

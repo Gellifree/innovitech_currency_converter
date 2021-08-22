@@ -5,7 +5,6 @@ from currency.file_handler import FileHandler
 from currency.language_handler import LanguageHandler
 from currency import settings as s
 
-
 class ApiHandler:
 	l = LanguageHandler.reimport_language()
 	status = l.lang["status_old"]
@@ -14,7 +13,6 @@ class ApiHandler:
 	def update_language():
 		ApiHandler.l = LanguageHandler.reimport_language()
 		ApiHandler.check_status()
-
 
 	@staticmethod
 	def check_status():
@@ -25,7 +23,6 @@ class ApiHandler:
 		else:
 			ApiHandler.status = ApiHandler.l.lang["status_up_to_date"]
 		return ApiHandler.status
-
 
 	@staticmethod
 	def request_api():
@@ -44,6 +41,21 @@ class ApiHandler:
 			f.close()
 			print(ApiHandler.l.lang["update_failed"])
 
+	@staticmethod
+	def request_api_symbols():
+		url = "http://api.exchangeratesapi.io/v1/symbols?access_key=0f0626556ccdfcbf4b712ee1e7086914"
+		response = requests.request("GET", url)
+		if(response.ok):
+			print(ApiHandler.l.lang["update_succes"])
+			f = open("currency/data/symbols.json", "w")
+			f.write(response.text)
+			f.close()
+		else:
+			f = open("currency/data/error_log", "a")
+			f.write("  >>> Error while updating symbols <<<\n")
+			f.write("  Code:" + str(response.status_code) + "\n")
+			f.close()
+			print(ApiHandler.l.lang["update_failed"])
 
 	@staticmethod
 	def refresh_data():
@@ -52,12 +64,3 @@ class ApiHandler:
 			ApiHandler.request_api()
 		elif(ApiHandler.check_status() == ApiHandler.l.lang["status_up_to_date"]):
 			print(ApiHandler.l.lang["no_update_needed"])
-
-if(False):
-    url = "http://api.exchangeratesapi.io/v1/symbols?access_key=0f0626556ccdfcbf4b712ee1e7086914"
-    response = requests.request("GET", url)
-    print(response.text)
-
-    f = open("currency/data/symbols.json", "w")
-    f.write(response.text)
-    f.close()

@@ -53,3 +53,8 @@ Ezzel az eredetileg elkészített követelménylista teljesítésre került.
  - Az előzmények törölhetőek
  - Amennyiben bekapcsoltuk hogy jelenítse meg a legutojára/legtöbbet használt valutákat, de nincs rendelkezésre álló adat, a program jelzi a felhasználónak.
  - Minden kilépésnél elmentjük a program futása közben történt beállítás változásokat, hogy azokat visszatölthessük újraindulás után.
+
+**2021-08-22**
+
+A mai nap folyamán lett pár felületes teszt elvégezve, de nem minden modul lett letesztelve. A legfontosabb, hibakezelő modul le lett fedve, ezenkívül a beállítások modul egy kis része, és a menü is.
+Ezenkívül elkészítettem két segéd dokumentumot, ami tartalmazza a program használatához szükséges információkat.

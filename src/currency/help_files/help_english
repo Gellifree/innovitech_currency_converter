@@ -96,6 +96,9 @@ MENU
               You have the option to delete all of the saved information
               about previous currency exchanges.
 
+            - Force update currency symbols
+              You can force update the symbols json file if you want.
+
             - Watch settings
               You have the option to watch all of the settings values from the
               settings menu.

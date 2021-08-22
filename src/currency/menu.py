@@ -1,8 +1,6 @@
 from . import settings as s
 from currency.language_handler import LanguageHandler
 
-
-# Menü kirajzolását megvalósító osztály
 class MenuDrawer:
 	l = LanguageHandler.reimport_language()
 

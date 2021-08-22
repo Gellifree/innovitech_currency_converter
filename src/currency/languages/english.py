@@ -79,3 +79,5 @@ lang["watch_settings"]          = "Watch settings"
 lang["function_turned_off"]     = ">>>> Attention: This function is turned off at the moment! <<<<\n"
 
 lang["need_help"]               = "  >> What do you need help with? <<\n"
+
+lang["update_symbols"]          = "Force update currency symbols"
