@@ -13,7 +13,7 @@ lang["menu_item_view"   ]       = "View stored conversions"
 lang["menu_item_settings"]      = "Settings"
 lang["menu_item_help"]          = "Help"
 lang["menu_item_quit"]          = "Exit"
-lang["menu_item_list_currency"] = "List all currency"
+lang["menu_item_list_currency"] = "List all currencies"
 lang["force_update"]            = "Force update data"
 
 lang["value"]                   = "  >> Please enter the value you need to convert! <<"
@@ -77,3 +77,5 @@ lang["list_last_or_most"]       = "List recently/mostly used currencies"
 lang["watch_settings"]          = "Watch settings"
 
 lang["function_turned_off"]     = ">>>> Attention: This function is turned off at the moment! <<<<\n"
+
+lang["need_help"]               = "  >> What do you need help with? <<\n"

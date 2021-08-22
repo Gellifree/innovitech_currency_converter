@@ -1,0 +1,108 @@
+NAME
+        CurrencyConverter - Terminal based converter program
+        Version: 0.1
+
+DESCRIPTION
+
+        A simple currency converter written in python. Using an API to have
+        fresh information every day. The program only updates once per day.
+
+        You dont need special information to acces the program.
+
+        Tested in:
+          Elementary-OS 5.1.7
+          Kernel: 5.4.0-80-generic
+          Shell: fish 2.7.1
+
+          Python version: 3.6.9
+
+LICENSE
+         GPL-3.0-or-later
+         2021 Kovács Norbert <mfw.kovacs.norbert@gmail.com>
+
+MENU
+        [Q] Exit
+            Press 'q' or 'Q' to exit from the program. If you have changed any
+            settings, the program will automaticly save them for you.
+
+        [0] Currency exchange
+            The program will ask for an input from you. Type a value you need
+            to convert. You can type a currency type next to the value as well.
+
+            Make sure, to use a 'space' as a separator. ('123.4 eur')
+
+            If you didn't specify any currency type, the program will ask for
+            it.
+
+            After you typed a correct currency, you need to type the target
+            currency type.
+
+            The program will print out the result, and save the operation.
+
+        [1] List all currencies
+            The program will print out all the available currencies under each
+            other.
+
+        [2] View stored conversions
+            You need to specify the filter option.
+
+            - View all
+              Lists all saved information
+            - Filter by date
+              After you specify a date, its listing all of the saved information
+              which has the date you entered
+            - Filter by currency
+              After you specify the currency type, its listing all of the
+              information containing that specific currency
+
+        [3] Settings
+            You have the option to customize the program behavior to your
+            liking.
+
+            - Change language
+              You can change the language of the program while running. The
+              setting will be saved after quitting
+              Available languages: english, hungarian
+
+            - Turn functions on/off
+              You can turn on or off some built in functions.
+
+              - List result list when converting:
+                Collects data from your previous conversions, and use them as a
+                guide to show you all the results in a list. You can still
+                specify a currency after.
+
+              - List recenty/mostly used currencies:
+                Collects data from your previous conversions, and use them as a
+                guide to show you all the previously used currencies, to help
+                you while converting.
+
+            - Currency bar settings
+              If the option [List recently/mostly used currencies] is off
+              the program will warn you about it.
+
+              You can choose between two methods to collect data from your
+              previous conversions.
+
+              - Mostly used currencies
+                This option will calculate the mostly used currencies (5 max)
+                from the saved information, and use them while listing.
+
+              - Recently used currencies
+                This option will collect the lastly used currencies (5 max)
+                from the saved information, and use them while listing.
+
+            - Clear history
+              You have the option to delete all of the saved information
+              about previous currency exchanges.
+
+            - Watch settings
+              You have the option to watch all of the settings values from the
+              settings menu.
+
+        [3] Help
+            Shows this help file.
+
+AUTHOR
+        Written by Norbert Kovács
+        E-mail: mfw.kovacs.norbert@gmail.com

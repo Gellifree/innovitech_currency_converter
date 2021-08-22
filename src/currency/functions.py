@@ -1,4 +1,4 @@
-
+import os
 from currency.file_handler import FileHandler
 from currency.error_handler import ErrorHandler
 from currency.converter import Converter
@@ -292,6 +292,10 @@ class Functions:
 			print(" >> " + settings_menu[answer] + " <<\n")
 			settings_menu_func_list[answer]()
 
+
 	@staticmethod
 	def help():
-		print("fourth function")
+		if(s.settings["language"] == "english"):
+			os.system("cat currency/help_files/help_english")
+		elif(s.settings["language"] == "hungarian"):
+			os.system("cat currency/help_files/help_hungarian")

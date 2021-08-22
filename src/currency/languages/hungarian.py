@@ -76,3 +76,5 @@ lang["list_last_or_most"]       = "Leggyakrabban/utoljára használt valuták li
 lang["watch_settings"]          = "Beállítások megtekintése"
 
 lang["function_turned_off"]     = ">>>> Figyelem: Ez a funkció jelenleg ki van kapcsolva! <<<<\n"
+
+lang["need_help"]               = "  >> Mivel kapcsolatban van szüksége segítségre? <<\n"

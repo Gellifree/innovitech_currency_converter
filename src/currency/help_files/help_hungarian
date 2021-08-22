@@ -1,0 +1,110 @@
+NÉV
+        CurrencyConverter - Terminál alapú konvertáló program
+        Verzió: 0.1
+
+LEÍRÁS
+
+        Egy egyszerű átváltó program, python nyelven írva. API szolgáltatás
+        használatával, hogy friss információkkal rendelkezzen minden nap.
+        A program naponta egyszer frissíti az adatokat.
+
+        Nincs szükség különleges információhoz a program használatához.
+
+        Tesztelve:
+          Elementary-OS 5.1.7
+          Kernel: 5.4.0-80-generic
+          Shell: fish 2.7.1
+
+          Python verzió: 3.6.9
+
+LICENSZ
+         GPL-3.0-or-later
+         2021 Kovács Norbert <mfw.kovacs.norbert@gmail.com>
+
+MENÜ
+        [Q] Kilépés
+            Nyomj 'q' vagy 'Q' betűket, hogy kilépj a programból. Ha
+            változtattál a beállításokon, a program automatikusan lementi a
+            változtatásokat kilépés előtt.
+
+        [0] Valutaváltás
+            A program bekéri tőled a szükséges információt. Írd be az értéket
+            amit át szeretnél váltani. A beírt érték mellé, jelezheted a
+            program számára hogy milyen valuta szerint értelmezett.
+
+            Használj 'szóközt' az elválasztónak ('123.4 eur')
+
+            Amennyiben nem adtál meg valutatípust, a program kérni fogja,
+            hogy add meg.
+
+            Miután egy megfelelő valutatípust adtál meg, meg kell adnod a cél
+            valutatípust is.
+
+            A program kiírja az eredményt, és lementi a műveletet.
+
+        [1] Összes valuta listázása
+            A program kiírja az összes elérhető valutatípust egymás alá.
+
+        [2] Tárolt átváltások megtekintése
+            Megkell adnod egy szűrési opciót.
+
+            - Összes megtekintése
+              Kilistázza az összes lementett adatot.
+            - Dátum szerinti szűrés
+              Miután megadtál egy dátumot, kilistázza az összes adatot, ami
+              az adott napon lett lementve.
+            - Valuta szerinti szűrés
+              Miután megadod a valutatípust, kilistázza az összes adatot,
+              ami tartalmazza a megadott valutatípust.
+
+        [3] Beállítások
+            Megvan a lehetőséged, hogy személyre szabd a program működését,
+            ahogy szeretnéd.
+
+            - Nyelv megváltoztatása
+              Megváltoztathatod a program nyelvét, futás közben. A beállítás
+              le lesz mentve kilépés esetén.
+              Elréhető nyelvek: angol, magyar
+
+            - Funkciók ki/be kapcsolása
+              Különböző funkciókat ki/be lehet kapcsolni.
+
+              - Eredmények listázása átváltásnál:
+                Összegyűjti az adatok a korábbi átváltásokból, és felhasználja
+                hogy egy listában megmutassa az átváltások eredményét. Ezután
+                megadhatunk egy valutát, hogy átváltsuk a beírt összeget.
+
+              - Leggyakrabban/utoljára használt valuták listázása:
+                Összegyűjti az adatok a korábbi átváltásokból, és felhasználja
+                hogy kiírja az összes előzőleg/legtöbbet használt valutát.
+
+            - Valuta sáv beállításai
+
+              Amennyiben az [Leggyakrabban/utoljára használt valuták listázása]
+              opció ki van kapcsolva úgy a program figyelmeztetni fog.
+
+              Két módszer közül lehet választani, az adatgyűjtéssel kapcsolatban
+              a korábbi konvertálások közül.
+
+              - Legtöbbet használt valuták
+                Ezzel az opcióval a program kiszámolja a legtöbbet használt
+                (maximum 5) valutát a lementett adatokból, és használja a
+                kilistázásnál.
+
+              - Legutoljára használt valuták
+                Ezzel az opcióval a program kiszámolja a legutoljára használt
+                (maximum 5) valutát a lementett adatokból, és használja a
+                kilistázásnál.
+
+            - Előzmények törlése
+              Lehetőséged van törölni az összes lementett átváltási adatot.
+
+            - Beállítások megtekintése
+              Lehetőséged van megtekinteni az összes beállítás értékét.
+
+        [3] Segítség
+            Kiírja ezt a dokumentumot.
+
+SZERZŐ
+        Írta: Kovács Norbert
+        E-mail: mfw.kovacs.norbert@gmail.com
