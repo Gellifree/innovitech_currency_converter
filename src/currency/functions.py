@@ -66,7 +66,13 @@ class Functions:
 				target_list = Analizer.calculate_last_five()[1]
 				InfoBar.draw_recent(target_list)
 
+
 		if(s.settings["list_multiple"] == 'on'):
+			if(s.settings["last_or_most"] == "mostly_used"):
+				target_list = Analizer.calculate_mostly_used()[1]
+			else:
+				target_list = Analizer.calculate_last_five()[1]
+
 			convert_results = Converter.convert_from_list(base, target_list, value)
 			InfoBar.draw_results(convert_results)
 
