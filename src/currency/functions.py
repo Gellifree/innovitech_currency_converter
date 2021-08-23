@@ -38,6 +38,17 @@ class Functions:
 
 		base = "unknown"
 
+
+		# Többször újrageneráljuk az adatokat, ideális volna, külön
+		# adatszerkezetbe lementeni, hogy ke kelljen mindig legenerálnunk
+
+		# Esetleg, hogy ne kelljen külön függvényt meghívnunk a kirajzoláshoz
+		# paraméterben átadhatnánk hogy mit kell kiírni, így kapnánk
+		# egy álltalánosabb megvalósítását a kiratásnak
+
+
+		# refaktorálást igényel ->
+		
 		if(result[1] == "unknown"):
 			if(s.settings["show_last_or_most"] == 'on'):
 				if(s.settings["last_or_most"] == "mostly_used"):
@@ -75,6 +86,8 @@ class Functions:
 
 			convert_results = Converter.convert_from_list(base, target_list, value)
 			InfoBar.draw_results(convert_results)
+
+		# refaktorálást igényel <-
 
 		while(ErrorHandler.valid_currency(target) == False):
 			print(Functions.l.lang["target"])
