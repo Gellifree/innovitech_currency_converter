@@ -28,10 +28,20 @@ class MainWindow(Gtk.Window):
 
 
         self.value_entry = Gtk.Entry()
-        self.base_combobox = Gtk.ComboBox()
-        self.target_combobox = Gtk.ComboBox()
+        self.base_combobox = Gtk.ComboBoxText()
+        self.base_combobox.append_text('USD')
+        self.base_combobox.append_text('EUR')
+        self.base_combobox.append_text('HUF')
+
+
+        self.target_combobox = Gtk.ComboBoxText()
+        self.target_combobox.append_text('USD')
+        self.target_combobox.append_text('EUR')
+        self.target_combobox.append_text('HUF')
+
         self.result_label = Gtk.Label(label="null")
         self.convert_button = Gtk.Button(label="Convert")
+        self.convert_button.connect('clicked', self.on_button_clicked)
 
         self.box_container.pack_start(self.value_entry, True, True, 0)
 
@@ -45,7 +55,10 @@ class MainWindow(Gtk.Window):
         self.box_container.pack_start(self.convert_button, True, True, 0)
 
     def on_button_clicked(self, widget):
-        print("You pressed me!")
+        print(self.value_entry.get_text())
+
+    def second_button_pressed(self, widget):
+        self.value_entry.set_text("new value")
 
 
 def main():
