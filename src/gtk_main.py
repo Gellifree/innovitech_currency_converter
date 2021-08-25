@@ -16,6 +16,7 @@ from currency.functions import Functions
 from currency.api_handler import ApiHandler
 from currency.language_handler import LanguageHandler
 from currency.settings_handler import SettingsHandler
+from currency.converter import Converter
 
 
 class MainWindow(Gtk.Window):
@@ -32,12 +33,14 @@ class MainWindow(Gtk.Window):
         self.base_combobox.append_text('USD')
         self.base_combobox.append_text('EUR')
         self.base_combobox.append_text('HUF')
+        self.base_combobox.set_active(0)
 
 
         self.target_combobox = Gtk.ComboBoxText()
         self.target_combobox.append_text('USD')
         self.target_combobox.append_text('EUR')
         self.target_combobox.append_text('HUF')
+        self.target_combobox.set_active(0)
 
         self.result_label = Gtk.Label(label="null")
         self.convert_button = Gtk.Button(label="Convert")
@@ -55,10 +58,14 @@ class MainWindow(Gtk.Window):
         self.box_container.pack_start(self.convert_button, True, True, 0)
 
     def on_button_clicked(self, widget):
-        print(self.value_entry.get_text())
+        value = float(self.value_entry.get_text())
+        result = ""
+        base = self.base_combobox.get_active_text()
+        target = self.target_combobox.get_active_text()
 
-    def second_button_pressed(self, widget):
-        self.value_entry.set_text("new value")
+        result = Converter.convert(base, target, value)
+        self.result_label.set_label(str(result))
+
 
 
 def main():
